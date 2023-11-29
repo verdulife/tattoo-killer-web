@@ -1,0 +1,26 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Logo from "@/assets/Logo.astro";
+---
+
+<Layout title="Welcome to Astro.">
+  <section
+    id="inicio"
+    class="relative h-screen flex flex-col items-center justify-center bg-black"
+  >
+    <figure class="absolute inset-0 h-full">
+      <video
+        src="/bg.mp4"
+        playsinline
+        autoplay
+        muted
+        class="h-full object-cover"
+      >
+      </video>
+    </figure>
+
+    <picture class="z-10">
+      <Logo />
+    </picture>
+  </section>
+</Layout>
