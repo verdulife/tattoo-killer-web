@@ -1,6 +1,7 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import Logo from "@/assets/Logo.astro";
+import Container from "@/assets/Container.astro";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -18,29 +19,44 @@ import Logo from "@/assets/Logo.astro";
         playsinline
         autoplay
         muted
-        class="h-full object-cover"
+        class="w-full h-full object-cover"
       >
       </video>
     </figure>
 
-    <picture class="z-10">
-      <Logo />
-    </picture>
+    <article
+      class="flex flex-col items-center gap-8 z-10 text-transparent max-w-7xl"
+    >
+      <picture>
+        <Logo />
+      </picture>
+
+      <h1
+        class="reveal font-title text-6xl lg:text-8xl font-bold text-center text-stroke-2 text-stroke-black"
+      >
+        Eliminar tatuajes, micropicmentacion y manchas sin dolor
+      </h1>
+
+      <a href="#saber-mas" class="text-black font-title font-bold">SABER MÁS</a>
+    </article>
   </section>
 
   <section
-    id="welcome"
+    id="saber-mas"
     class="h-screen flex flex-col items-center justify-center text-center"
   >
     <article class="max-w-4xl">
-      <h1 class="reveal text-7xl font-bold font-outline-1 text-white">
+      <h2
+        class="reveal text-5xl lg:text-7xl font-bold font-title text-transparent text-stroke-2 text-stroke-black"
+      >
         Bienvenidos a tattoo killer, quitar tattoos poner cera
-      </h1>
-      <p class="text-xl">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis
-        magni animi itaque error, earum voluptatum odit praesentium quia nulla
-        quibusdam. Nihil hic totam at adipisci quasi magni repudiandae,
-        accusantium veniam!
+      </h2>
+
+      <p class="text-center font-xl">
+        Con nuestro equipo de especialistas ubicados en la provincia de
+        Barcelona, nuestro equipo está comprometido con servicios de vanguardia
+        en eliminación de tatuajes, micropigmentación y tratamiento de manchas
+        en la piel.
       </p>
     </article>
   </section>
@@ -50,41 +66,9 @@ import Logo from "@/assets/Logo.astro";
     class="h-screen flex flex-col items-center justify-center text-center"
   >
     <article class="max-w-4xl">
-      <h1 class="reveal text-7xl font-bold font-outline-1 text-white">
-        Bienvenidos a tattoo killer, quitar tattoos poner cera
-      </h1>
-      <p class="text-xl">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis
-        magni animi itaque error, earum voluptatum odit praesentium quia nulla
-        quibusdam. Nihil hic totam at adipisci quasi magni repudiandae,
-        accusantium veniam!
-      </p>
-    </article>
-  </section>
-
-  <section
-    id="welcome3"
-    class="h-screen flex flex-col items-center justify-center text-center"
-  >
-    <article class="max-w-4xl">
-      <h1 class="reveal text-7xl font-bold font-outline-1 text-white">
-        Bienvenidos a tattoo killer, quitar tattoos poner cera
-      </h1>
-      <p class="text-xl">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis
-        magni animi itaque error, earum voluptatum odit praesentium quia nulla
-        quibusdam. Nihil hic totam at adipisci quasi magni repudiandae,
-        accusantium veniam!
-      </p>
-    </article>
-  </section>
-
-  <section
-    id="welcome4"
-    class="h-screen flex flex-col items-center justify-center text-center"
-  >
-    <article class="max-w-4xl">
-      <h1 class="reveal text-7xl font-bold font-outline-1 text-white">
+      <h1
+        class="reveal text-5xl lg:text-7xl font-bold font-title text-transparent text-stroke-2 text-stroke-black"
+      >
         Bienvenidos a tattoo killer, quitar tattoos poner cera
       </h1>
       <p class="text-xl">
@@ -96,28 +80,3 @@ import Logo from "@/assets/Logo.astro";
     </article>
   </section>
 </Layout>
-
-<script>
-  import { gsap } from "gsap";
-  import { ScrollTrigger } from "gsap/ScrollTrigger";
-  import SplitType from "split-type";
-
-  gsap.registerPlugin(ScrollTrigger);
-  const splitTypes = document.querySelectorAll(".reveal") as any;
-
-  splitTypes.forEach((splitType: any) => {
-    const text = new SplitType(splitType, { types: "words,chars" });
-
-    gsap.from(text.chars, {
-      scrollTrigger: {
-        trigger: splitType,
-        start: "top 50%",
-        end: "top 10%",
-        scrub: 0.7,
-        markers: false,
-      },
-      color: "black",
-      stagger: 1,
-    });
-  });
-</script>
