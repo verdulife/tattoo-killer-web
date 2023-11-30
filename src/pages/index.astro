@@ -4,9 +4,13 @@ import Logo from "@/assets/Logo.astro";
 ---
 
 <Layout title="Welcome to Astro.">
+  <span
+    class="fixed top-0 w-full flex h-[40vh] bottom-[80%] bg-gradient-to-b from-white from-[40%] to-transparent pointer-events-none"
+  ></span>
+
   <section
     id="inicio"
-    class="relative h-screen flex flex-col items-center justify-center bg-black"
+    class="relative h-screen flex flex-col items-center justify-center bg-black z-10"
   >
     <figure class="absolute inset-0 h-full">
       <video
@@ -23,4 +27,97 @@ import Logo from "@/assets/Logo.astro";
       <Logo />
     </picture>
   </section>
+
+  <section
+    id="welcome"
+    class="h-screen flex flex-col items-center justify-center text-center"
+  >
+    <article class="max-w-4xl">
+      <h1 class="reveal text-7xl font-bold font-outline-1 text-white">
+        Bienvenidos a tattoo killer, quitar tattoos poner cera
+      </h1>
+      <p class="text-xl">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis
+        magni animi itaque error, earum voluptatum odit praesentium quia nulla
+        quibusdam. Nihil hic totam at adipisci quasi magni repudiandae,
+        accusantium veniam!
+      </p>
+    </article>
+  </section>
+
+  <section
+    id="welcome2"
+    class="h-screen flex flex-col items-center justify-center text-center"
+  >
+    <article class="max-w-4xl">
+      <h1 class="reveal text-7xl font-bold font-outline-1 text-white">
+        Bienvenidos a tattoo killer, quitar tattoos poner cera
+      </h1>
+      <p class="text-xl">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis
+        magni animi itaque error, earum voluptatum odit praesentium quia nulla
+        quibusdam. Nihil hic totam at adipisci quasi magni repudiandae,
+        accusantium veniam!
+      </p>
+    </article>
+  </section>
+
+  <section
+    id="welcome3"
+    class="h-screen flex flex-col items-center justify-center text-center"
+  >
+    <article class="max-w-4xl">
+      <h1 class="reveal text-7xl font-bold font-outline-1 text-white">
+        Bienvenidos a tattoo killer, quitar tattoos poner cera
+      </h1>
+      <p class="text-xl">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis
+        magni animi itaque error, earum voluptatum odit praesentium quia nulla
+        quibusdam. Nihil hic totam at adipisci quasi magni repudiandae,
+        accusantium veniam!
+      </p>
+    </article>
+  </section>
+
+  <section
+    id="welcome4"
+    class="h-screen flex flex-col items-center justify-center text-center"
+  >
+    <article class="max-w-4xl">
+      <h1 class="reveal text-7xl font-bold font-outline-1 text-white">
+        Bienvenidos a tattoo killer, quitar tattoos poner cera
+      </h1>
+      <p class="text-xl">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis
+        magni animi itaque error, earum voluptatum odit praesentium quia nulla
+        quibusdam. Nihil hic totam at adipisci quasi magni repudiandae,
+        accusantium veniam!
+      </p>
+    </article>
+  </section>
 </Layout>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  import SplitType from "split-type";
+
+  gsap.registerPlugin(ScrollTrigger);
+  const splitTypes = document.querySelectorAll(".reveal") as any;
+
+  splitTypes.forEach((splitType: any) => {
+    const text = new SplitType(splitType, { types: "words,chars" });
+
+    gsap.from(text.chars, {
+      scrollTrigger: {
+        trigger: splitType,
+        start: "top 50%",
+        end: "top 10%",
+        scrub: 0.7,
+        markers: false,
+      },
+      color: "black",
+      stagger: 1,
+    });
+  });
+</script>
