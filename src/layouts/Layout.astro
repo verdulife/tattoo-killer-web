@@ -28,20 +28,33 @@ const { title } = Astro.props;
   import SplitType from "split-type";
 
   gsap.registerPlugin(ScrollTrigger);
-  const splitTypes = document.querySelectorAll(".reveal") as any;
+  const splitTypes = document.querySelectorAll(".erease") as any;
 
   splitTypes.forEach((splitType: any) => {
     const text = new SplitType(splitType, { types: "words,chars" });
 
-    gsap.from(text.chars, {
+    gsap.to(text.chars, {
       scrollTrigger: {
         trigger: splitType,
-        start: "top 35%",
-        end: "top 10%",
-        scrub: 0.7,
+        start: "top 60%",
+        end: "top 20%",
+        scrub: 1,
         markers: false,
       },
-      color: "black",
+      color: "transparent",
+      stagger: 1,
+    });
+
+    gsap.to(text.chars, {
+      scrollTrigger: {
+        trigger: splitType,
+        start: "top 20%",
+        end: "top 5%",
+        scrub: 2,
+        markers: false,
+      },
+      transform: "translateY(-50%) rotate(-10deg)",
+      opacity: 0,
       stagger: 1,
     });
   });

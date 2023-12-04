@@ -1,19 +1,14 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import Logo from "@/assets/Logo.astro";
-import Container from "@/assets/Container.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-  <span
-    class="fixed top-0 w-full flex h-[40vh] bottom-[80%] bg-gradient-to-b from-white from-[40%] to-transparent pointer-events-none"
-  ></span>
-
   <section
     id="inicio"
-    class="relative h-screen flex flex-col items-center justify-center bg-black z-10"
+    class="relative h-screen flex flex-col items-center justify-center bg-gradient-to-br from-gray-200 via-transparent to-transparent"
   >
-    <figure class="absolute inset-0 h-full">
+    <!-- <figure class="absolute inset-0 h-full mix-blend-multiply">
       <video
         src="/bg.mp4"
         playsinline
@@ -22,22 +17,20 @@ import Container from "@/assets/Container.astro";
         class="w-full h-full object-cover"
       >
       </video>
-    </figure>
+    </figure> -->
 
-    <article
-      class="flex flex-col items-center gap-8 z-10 text-transparent max-w-7xl"
-    >
+    <article class="flex flex-col items-center gap-8 z-10 max-w-6xl">
       <picture>
         <Logo />
       </picture>
 
       <h1
-        class="reveal font-title text-6xl lg:text-8xl font-bold text-center text-stroke-2 text-stroke-black"
+        class="erease font-title text-6xl lg:text-7xl font-bold text-center text-stroke-2 text-stroke-black"
       >
-        Eliminar tatuajes, micropicmentacion y manchas sin dolor
+        Elimina tus tatuajes rapidamente y sin dolor
       </h1>
 
-      <a href="#saber-mas" class="text-black font-title font-bold">SABER MÁS</a>
+      <a href="#saber-mas" class="text-black font-title font-bold">DESCUBRE COMO</a>
     </article>
   </section>
 
@@ -47,7 +40,7 @@ import Container from "@/assets/Container.astro";
   >
     <article class="max-w-4xl">
       <h2
-        class="reveal text-5xl lg:text-7xl font-bold font-title text-transparent text-stroke-2 text-stroke-black"
+        class="erease text-5xl lg:text-7xl font-bold font-title text-stroke-2 text-stroke-black"
       >
         Bienvenidos a tattoo killer, quitar tattoos poner cera
       </h2>
@@ -67,7 +60,7 @@ import Container from "@/assets/Container.astro";
   >
     <article class="max-w-4xl">
       <h1
-        class="reveal text-5xl lg:text-7xl font-bold font-title text-transparent text-stroke-2 text-stroke-black"
+        class="erease text-5xl lg:text-7xl font-bold font-title text-stroke-2 text-stroke-black"
       >
         Bienvenidos a tattoo killer, quitar tattoos poner cera
       </h1>
