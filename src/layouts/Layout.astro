@@ -39,59 +39,81 @@ const { title } = Astro.props;
   ereaseType.forEach((type: any) => {
     const text = new SplitType(type, { types: "words,chars" });
 
-    gsap.to(text.chars, {
-      scrollTrigger: {
-        trigger: type,
-        start: "top 35%",
-        end: "bottom 50%",
-        scrub: 0,
-        markers: false,
-      },
-      color: "transparent",
-      stagger: 1,
-    });
+    if (window.innerWidth > 1024) {
+      gsap.to(text.chars, {
+        scrollTrigger: {
+          trigger: type,
+          start: "top 35%",
+          end: "bottom 50%",
+          scrub: 0,
+          markers: false,
+        },
+        color: "transparent",
+        stagger: 1,
+      });
 
-    gsap.to(text.chars, {
-      scrollTrigger: {
-        trigger: type,
-        start: "top 30%",
-        end: "bottom 50%",
-        scrub: 1,
-        markers: false,
-      },
-      transform: "translateY(-50%)",
-      opacity: 0.1,
-      stagger: 1,
-    });
+      gsap.to(text.chars, {
+        scrollTrigger: {
+          trigger: type,
+          start: "top 30%",
+          end: "bottom 50%",
+          scrub: 1,
+          markers: false,
+        },
+        transform: "translateY(-50%)",
+        opacity: 0.1,
+        stagger: 1,
+      });
 
-    gsap.to(text.chars, {
-      scrollTrigger: {
-        trigger: type,
-        start: "top 25%",
-        end: "bottom 50%",
-        scrub: 1,
-        markers: false,
-      },
-      opacity: 0,
-      stagger: 1,
-    });
-  });
+      gsap.to(text.chars, {
+        scrollTrigger: {
+          trigger: type,
+          start: "top 25%",
+          end: "bottom 50%",
+          scrub: 1,
+          markers: false,
+        },
+        opacity: 0,
+        stagger: 1,
+      });
+    } else {
+      gsap.to(text.chars, {
+        scrollTrigger: {
+          trigger: type,
+          start: "top 35%",
+          end: "bottom 25%",
+          scrub: 0,
+          markers: false,
+        },
+        color: "transparent",
+        stagger: 1,
+      });
 
-  const revealTypes = document.querySelectorAll(".reveal") as any;
-  revealTypes.forEach((type: any) => {
-    const text = new SplitType(type, { types: "words,chars" });
+      gsap.to(text.chars, {
+        scrollTrigger: {
+          trigger: type,
+          start: "top 30%",
+          end: "bottom 25%",
+          scrub: 1,
+          markers: false,
+        },
+        transform: "translateY(-50%)",
+        opacity: 0.1,
+        stagger: 1,
+      });
 
-    gsap.from(text.chars, {
-      scrollTrigger: {
-        trigger: type,
-        start: "top 80%",
-        end: "bottom 50%",
-        scrub: 0,
-        markers: false,
-      },
-      opacity: 0.2,
-      stagger: 1,
-    });
+      gsap.to(text.chars, {
+        scrollTrigger: {
+          trigger: type,
+          start: "top 25%",
+          end: "bottom 25%",
+          scrub: 1,
+          markers: false,
+        },
+        opacity: 0,
+        stagger: 1,
+      });
+    }
   });
 </script>
 

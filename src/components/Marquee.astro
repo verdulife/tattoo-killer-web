@@ -1,0 +1,120 @@
+---
+import { Image } from "astro:assets";
+import ImageTooltip from "@/components/ImageTooltip.astro";
+import hombro from "@/assets/images/tattoo-killer-hombro.jpg";
+import brazo from "@/assets/images/tattoo-killer-brazo.jpg";
+import brazo2 from "@/assets/images/tattoo-killer-brazo2.jpg";
+import muneca from "@/assets/images/tattoo-killer-muneca.jpg";
+import tobillo from "@/assets/images/tattoo-killer-tobillo.jpg";
+import codo from "@/assets/images/tattoo-killer-codo.jpg";
+
+const seconds = "50s";
+const gap = "0.5rem";
+---
+
+<main class="flex lg:hidden relative w-full overflow-hidden -bottom-1/4 -mt-48">
+  <ul class="flex shrink-0">
+    <li>
+      <ImageTooltip sessions={5} color="blue">
+        <Image src={hombro} alt="Eliminación de tatuajes" width={150} />
+      </ImageTooltip>
+    </li>
+
+    <li>
+      <ImageTooltip sessions={5} color="pink">
+        <Image src={brazo} alt="Eliminación de tatuajes" width={150} />
+      </ImageTooltip>
+    </li>
+
+    <li>
+      <ImageTooltip sessions={7} color="yellow">
+        <Image src={brazo2} alt="Eliminación de tatuajes" width={150} />
+      </ImageTooltip>
+    </li>
+
+    <li>
+      <ImageTooltip sessions={5} color="pink">
+        <Image src={muneca} alt="Eliminación de tatuajes" width={150} />
+      </ImageTooltip>
+    </li>
+
+    <li>
+      <ImageTooltip sessions={5} color="blue">
+        <Image src={tobillo} alt="Eliminación de tatuajes" width={150} />
+      </ImageTooltip>
+    </li>
+
+    <li>
+      <ImageTooltip sessions={7} color="yellow">
+        <Image src={codo} alt="Eliminación de tatuajes" width={150} />
+      </ImageTooltip>
+    </li>
+  </ul>
+  <ul class="flex shrink-0">
+    <li>
+      <ImageTooltip sessions={5} color="blue">
+        <Image src={hombro} alt="Eliminación de tatuajes" width={150} />
+      </ImageTooltip>
+    </li>
+
+    <li>
+      <ImageTooltip sessions={5} color="pink">
+        <Image src={brazo} alt="Eliminación de tatuajes" width={150} />
+      </ImageTooltip>
+    </li>
+
+    <li>
+      <ImageTooltip sessions={7} color="yellow">
+        <Image src={brazo2} alt="Eliminación de tatuajes" width={150} />
+      </ImageTooltip>
+    </li>
+
+    <li>
+      <ImageTooltip sessions={5} color="pink">
+        <Image src={muneca} alt="Eliminación de tatuajes" width={150} />
+      </ImageTooltip>
+    </li>
+
+    <li>
+      <ImageTooltip sessions={5} color="blue">
+        <Image src={tobillo} alt="Eliminación de tatuajes" width={150} />
+      </ImageTooltip>
+    </li>
+
+    <li>
+      <ImageTooltip sessions={7} color="yellow">
+        <Image src={codo} alt="Eliminación de tatuajes" width={150} />
+      </ImageTooltip>
+    </li>
+  </ul>
+</main>
+
+<style define:vars={{ seconds, gap }}>
+  main {
+    gap: var(--gap);
+  }
+
+  ul {
+    animation: marquee var(--seconds) linear infinite;
+    gap: var(--gap);
+  }
+
+  main:hover > ul,
+  main:focus > ul,
+  main:active > ul {
+    animation-play-state: paused;
+  }
+
+  .reverse {
+    animation-direction: reverse;
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+</style>
