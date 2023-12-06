@@ -16,6 +16,7 @@
     "gsap": "^3.12.3",
     "split-type": "^0.3.4",
     "tailwindcss": "^3.0.24",
+    "tailwindcss-animated": "^1.0.1",
     "typescript": "^5.3.2"
   },
   "devDependencies": {

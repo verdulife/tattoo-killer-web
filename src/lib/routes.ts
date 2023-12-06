@@ -16,7 +16,7 @@ export const routes = [
     title: "Resultados",
   },
   {
-    slug: "/encuentranos",
-    title: "Encuentranos",
+    slug: "/contacto",
+    title: "Contacto",
   },
 ];
