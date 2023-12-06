@@ -1,0 +1,31 @@
+---
+import Logo from "@/assets/Logo.astro";
+import { routes } from "@/lib/routes";
+---
+
+<header class="fixed top-0 left-0 flex justify-center z-50 w-full p-4">
+  <nav
+    class="flex justify-center lg:justify-between px-8 py-4 max-w-6xl w-full rounded-xl backdrop-blur bg-slate-50/10 border border-slate-200"
+  >
+    <a href="#inicio">
+      <span class="flex items-center gap-2 text-xl font-title font-extrabold">
+        <Logo width={50} /> TattoKiller
+      </span>
+    </a>
+
+    <ul class="hidden lg:flex items-center">
+      {
+        routes.map(({ slug, title }) => (
+          <li>
+            <a
+              href={slug}
+              class="py-2 px-6 text-lg font-semibold border-2 border-transparent hover:border-slate-600 transition-colors rounded-lg"
+            >
+              {title}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</header>

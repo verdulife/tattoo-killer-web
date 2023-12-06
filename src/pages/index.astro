@@ -6,7 +6,7 @@ import Logo from "@/assets/Logo.astro";
 <Layout title="Welcome to Astro.">
   <section
     id="inicio"
-    class="relative h-screen flex flex-col items-center justify-center bg-gradient-to-br from-gray-200 via-transparent to-transparent"
+    class="relative h-screen flex flex-col items-center justify-center"
   >
     <!-- <figure class="absolute inset-0 h-full mix-blend-multiply">
       <video
@@ -19,33 +19,35 @@ import Logo from "@/assets/Logo.astro";
       </video>
     </figure> -->
 
-    <article class="flex flex-col items-center gap-8 z-10 max-w-6xl">
+    <article class="flex flex-col items-center gap-8 z-10 max-w-6xl px-8">
       <picture>
         <Logo />
       </picture>
 
       <h1
-        class="erease font-title text-6xl lg:text-7xl font-bold text-center text-stroke-2 text-stroke-black"
+        class="erease font-title text-4xl lg:text-7xl font-bold text-center text-stroke-[1px] lg:text-stroke-2 text-stroke-slate-800"
       >
         Elimina tus tatuajes rapidamente y sin dolor
       </h1>
 
-      <a href="#saber-mas" class="text-black font-title font-bold">DESCUBRE COMO</a>
+      <a href="#saber-mas" class="text-slate-100 font-title text-xs font-bold bg-slate-800 px-8 pt-5 pb-4 rounded-xl border-2 border-slate-800 hover:text-slate-800 hover:bg-transparent transition-colors"
+        >DESCUBRE COMO</a
+      >
     </article>
   </section>
 
   <section
     id="saber-mas"
-    class="h-screen flex flex-col items-center justify-center text-center"
+    class="flex flex-col items-center justify-center text-center px-8 py-20 lg:py-48"
   >
     <article class="max-w-4xl">
       <h2
-        class="erease text-5xl lg:text-7xl font-bold font-title text-stroke-2 text-stroke-black"
+        class="erease text-4xl lg:text-7xl font-bold font-title text-stroke-[1px] lg:text-stroke-2 text-stroke-black"
       >
         Bienvenidos a tattoo killer, quitar tattoos poner cera
       </h2>
 
-      <p class="text-center font-xl">
+      <p class="text-center text-xl">
         Con nuestro equipo de especialistas ubicados en la provincia de
         Barcelona, nuestro equipo está comprometido con servicios de vanguardia
         en eliminación de tatuajes, micropigmentación y tratamiento de manchas
@@ -55,20 +57,21 @@ import Logo from "@/assets/Logo.astro";
   </section>
 
   <section
-    id="welcome2"
-    class="h-screen flex flex-col items-center justify-center text-center"
+    id="next"
+    class="flex flex-col items-center justify-center text-center px-8 py-20 lg:py-48"
   >
     <article class="max-w-4xl">
-      <h1
-        class="erease text-5xl lg:text-7xl font-bold font-title text-stroke-2 text-stroke-black"
+      <h2
+        class="erease text-4xl lg:text-7xl font-bold font-title text-stroke-[1px] lg:text-stroke-2 text-stroke-black"
       >
         Bienvenidos a tattoo killer, quitar tattoos poner cera
-      </h1>
-      <p class="text-xl">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis
-        magni animi itaque error, earum voluptatum odit praesentium quia nulla
-        quibusdam. Nihil hic totam at adipisci quasi magni repudiandae,
-        accusantium veniam!
+      </h2>
+
+      <p class="text-center text-xl">
+        Con nuestro equipo de especialistas ubicados en la provincia de
+        Barcelona, nuestro equipo está comprometido con servicios de vanguardia
+        en eliminación de tatuajes, micropigmentación y tratamiento de manchas
+        en la piel.
       </p>
     </article>
   </section>
