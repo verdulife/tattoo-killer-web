@@ -1,7 +1,7 @@
 ---
 import OutlineLogo from "@/assets/OutlineLogo.astro";
 import Tooltips from "./Tooltips.astro";
-import Marquee from "./Marquee.astro";
+import HomeMarquee from "./HomeMarquee.astro";
 
 const colors = ["text-pink-500", "text-blue-500", "text-yellow-500"];
 const color = colors[Math.floor(Math.random() * colors.length)];
@@ -34,7 +34,7 @@ const color = colors[Math.floor(Math.random() * colors.length)];
 
       <a
         href="#servicios"
-        class="font-title text-xs font-bold px-8 pt-5 pb-4 rounded-xl border-2 border-transparent hover:text-slate-950 hover:underline decoration-wavy decoration-blue-500 transition-colors"
+        class="font-title text-xs font-bold px-8 pt-5 pb-4 rounded-xl border-2 border-transparent hover:text-slate-950 hover:underline decoration-wavy  transition-colors"
       >
         NUESTROS SERVICIOS
       </a>
@@ -43,5 +43,5 @@ const color = colors[Math.floor(Math.random() * colors.length)];
     <Tooltips />
   </article>
 
-  <Marquee />
+  <HomeMarquee />
 </section>
