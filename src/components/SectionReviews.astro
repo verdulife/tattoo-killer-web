@@ -1,0 +1,54 @@
+---
+import ReviewCard from "@/components/ReviewCard.astro";
+import { reviews } from "@/lib/reviews";
+
+const seconds = "30s";
+const gap = "1rem";
+---
+
+<section class="flex flex-col items-center gap-12 py-20">
+  <h2
+    class="erease max-w-4xl mt-10 text-2xl lg:text-4xl font-title tracking-tighter text-stroke-[0.03rem] text-stroke-slate-800 text-center px-4"
+  >
+    Nuestros clientes hablan por nosotros
+  </h2>
+
+  <main class="relative flex w-full overflow-hidden">
+    <ul class="flex shrink-0 pb-12">
+      {reviews.map((item) => <ReviewCard {...item} />)}
+    </ul>
+    <ul class="flex shrink-0 pb-12">
+      {reviews.map((item) => <ReviewCard {...item} />)}
+    </ul>
+  </main>
+</section>
+
+<style define:vars={{ seconds, gap }}>
+  main {
+    gap: var(--gap);
+  }
+
+  ul {
+    animation: marquee var(--seconds) linear infinite;
+    gap: var(--gap);
+  }
+
+  main:hover > ul,
+  main:focus > ul,
+  main:active > ul {
+    animation-play-state: paused;
+  }
+
+  .reverse {
+    animation-direction: reverse;
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+</style>
