@@ -1,25 +1,39 @@
 ---
-import Logo from "@/assets/Logo.astro";
 import { routes } from "@/lib/routes";
+import Logo from "@/assets/Logo.astro";
 ---
 
 <header class="fixed top-0 left-0 flex justify-center z-50 w-full p-4">
   <nav
-    class="flex justify-center lg:justify-between px-8 py-4 max-w-6xl w-full rounded-xl backdrop-blur bg-slate-50/10 border border-slate-200"
+    class="flex flex-col lg:flex-row justify-between items-center backdrop-blur px-4 lg:px-8 py-4 max-w-6xl w-full rounded-xl bg-slate-50/70 border border-slate-200"
   >
-    <a href="/">
-      <span class="flex items-center gap-2 text-xl font-title font-extrabold">
-        <Logo width={50} /> TattooKiller
-      </span>
-    </a>
+    <div class="flex items-center justify-between w-full lg:w-auto">
+      <a href="/">
+        <span class="flex items-center gap-2 text-xl font-title font-extrabold">
+          <Logo width={50} /> TattooKiller
+        </span>
+      </a>
 
-    <ul class="hidden lg:flex items-center">
+      <button
+        id="menuBtn"
+        class="flex lg:hidden flex-col w-10 h-9 justify-between items-end p-2"
+      >
+        <span class="w-full h-[3px] rounded-full bg-slate-800"></span>
+        <span class="w-1/2 h-[3px] rounded-full bg-slate-800"></span>
+        <span class="w-3/4 h-[3px] rounded-full bg-slate-800"></span>
+      </button>
+    </div>
+
+    <ul
+      id="menu"
+      class="hidden lg:flex flex-col lg:flex-row items-center p-8 lg:p-0 w-full lg:w-auto overflow-hidden"
+    >
       {
         routes.map(({ slug, title }) => (
-          <li>
+          <li class="flex w-full lg:w-auto">
             <a
               href={slug}
-              class="py-2 px-6 text-lg font-semibold border-2 border-transparent hover:border-slate-600 transition-colors rounded-lg"
+              class="w-full lg:w-auto text-2xl p-6 lg:py-2 lg:px-6 lg:text-lg font-semibold border lg:border-2 border-slate-200 shadow-lg lg:shadow-none lg:border-transparent lg:hover:border-slate-600 transition-colors rounded-lg mt-3 lg:mt-0 bg-slate-50 lg:bg-transparent"
             >
               {title}
             </a>
@@ -29,3 +43,12 @@ import { routes } from "@/lib/routes";
     </ul>
   </nav>
 </header>
+
+<script>
+  const menuBtn = document.querySelector("#menuBtn");
+  const menu = document.querySelector("#menu");
+
+  menuBtn?.addEventListener("click", () => {
+    menu?.classList.toggle("hidden");
+  });
+</script>

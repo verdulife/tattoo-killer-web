@@ -9,44 +9,44 @@ import tobillo from "@/assets/images/tattoo-killer-tobillo.jpg";
 import codo from "@/assets/images/tattoo-killer-codo.jpg";
 ---
 
-<div class="hidden lg:block -mt-10">
+<div class="hidden lg:block">
   <!-- TOP LEFT -->
-  <div class="tooltip absolute top-[-20%] left-[-10%] -rotate-3">
+  <div class="tooltip absolute top-[-10%] left-[-5%] -rotate-3">
     <ImageTooltip sessions={5} color="blue">
       <Image src={hombro} alt="Eliminación de tatuajes" width={120} />
     </ImageTooltip>
   </div>
 
   <!-- MID RIGHT -->
-  <div class="tooltip absolute top-[40%] right-[-20%] -rotate-6">
+  <div class="tooltip absolute top-[45%] right-[-15%] -rotate-6">
     <ImageTooltip sessions={5} color="pink">
       <Image src={brazo} alt="Eliminación de tatuajes" width={120} />
     </ImageTooltip>
   </div>
 
   <!-- TOP RIGHT -->
-  <div class="tooltip absolute top-[-25%] right-[-5%] rotate-6">
+  <div class="tooltip absolute top-[-5%] right-[0%] rotate-6">
     <ImageTooltip sessions={7} color="yellow">
       <Image src={brazo2} alt="Eliminación de tatuajes" width={120} />
     </ImageTooltip>
   </div>
 
   <!-- MID LEFT -->
-  <div class="tooltip absolute top-[35%] left-[-20%] rotate-3">
+  <div class="tooltip absolute top-[45%] left-[-15%] rotate-3">
     <ImageTooltip sessions={5} color="pink">
       <Image src={muneca} alt="Eliminación de tatuajes" width={120} />
     </ImageTooltip>
   </div>
 
   <!-- BOT RIGHT -->
-  <div class="tooltip absolute top-[95%] right-[-1%] rotate-3">
+  <div class="tooltip absolute top-[100%] right-[0%] rotate-3">
     <ImageTooltip sessions={5} color="blue">
       <Image src={tobillo} alt="Eliminación de tatuajes" width={120} />
     </ImageTooltip>
   </div>
 
   <!-- BOT LEFT -->
-  <div class="tooltip absolute top-[90%] left-[-10%] -rotate-6">
+  <div class="tooltip absolute top-[95%] left-[-5%] -rotate-6">
     <ImageTooltip sessions={7} color="yellow">
       <Image src={codo} alt="Eliminación de tatuajes" width={120} />
     </ImageTooltip>
@@ -63,10 +63,10 @@ import codo from "@/assets/images/tattoo-killer-codo.jpg";
     tooltips.forEach((tooltip, i) => {
       setTimeout(
         () => {
-          tooltip.classList.remove("opacity-0");
+          tooltip.classList.remove("lg:opacity-0");
 
           setTimeout(() => {
-            tooltip.classList.add("opacity-0");
+            tooltip.classList.add("lg:opacity-0");
           }, duration);
         },
         duration * i * delay,

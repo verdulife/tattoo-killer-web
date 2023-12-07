@@ -9,22 +9,28 @@ const color = colors[Math.floor(Math.random() * colors.length)];
 
 <section
   id="inicio"
-  class="relative h-screen flex flex-col items-center justify-center"
+  class="relative min-h-screen flex flex-col items-center pt-40 lg:pt-52"
 >
   <article
-    class="relative flex flex-col items-center gap-8 z-10 max-w-6xl px-8"
+    class="relative flex flex-col items-center z-10 max-w-4xl 2xl:max-w-6xl px-8 text-center"
   >
-    <picture class={color}>
+    <figure class={color}>
       <OutlineLogo />
-    </picture>
+    </figure>
 
     <h1
-      class="erease font-title text-5xl lg:text-7xl font-bold text-center text-stroke-[1px] lg:text-stroke-2 text-stroke-slate-800"
+      class="erease font-title text-4xl md:text-5xl 2xl:text-7xl font-bold text-stroke-[1px] lg:text-stroke-2 text-stroke-slate-800 mt-8"
     >
-      Elimina cualquier tatuaje, rápido y sin dolor
+      Despídete de tus tatuajes rápido y sin dolor ahora
     </h1>
 
-    <div class="flex flex-wrap justify-center gap-2">
+    <p class="text-lg font-title max-w-4xl mt-4">
+      Ubicados en Cataluña, en el equipo <strong>TattooKiller</strong>,
+      utilizamos la tecnología más avanzada para garantizar resultados
+      excepcionales.
+    </p>
+
+    <div class="flex flex-wrap justify-center gap-2 mt-12">
       <a
         href="#descubre-como"
         class="text-slate-100 font-title text-xs font-bold bg-slate-800 px-8 pt-5 pb-4 rounded-xl border-2 border-slate-800 hover:text-slate-800 hover:bg-transparent transition-colors"
@@ -34,7 +40,7 @@ const color = colors[Math.floor(Math.random() * colors.length)];
 
       <a
         href="#servicios"
-        class="font-title text-xs font-bold px-8 pt-5 pb-4 rounded-xl border-2 border-transparent hover:text-slate-950 hover:underline decoration-wavy  transition-colors"
+        class="font-title text-xs font-bold px-8 pt-5 pb-4 rounded-xl border-2 border-transparent hover:text-slate-950 underline decoration-wavy hover:no-underline transition-colors"
       >
         NUESTROS SERVICIOS
       </a>
