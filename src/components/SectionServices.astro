@@ -11,61 +11,83 @@ import Dots from "@/assets/icons/Dots.astro";
 >
   <Pretitle>NUESTROS SERIVICIOS</Pretitle>
 
-  <article class="max-w-6xl flex flex-wrap justify-center items-center mt-10">
-    <div class="flex flex-col items-center p-8 w-1/3">
+  <article
+    class="max-w-7xl flex flex-col lg:flex-row justify-center items-stretch gap-4 mt-10 text-center"
+  >
+    <div
+      class="flex flex-col items-center justify-between p-4 lg:p-12 rounded-xl backdrop-blur bg-slate-50/10 border-2 border-slate-200 shadow-md lg:shadow-xl"
+    >
       <figure>
         <Pencil />
       </figure>
 
-      <h2
-        class="erease text-xl lg:text-2xl font-title text-stroke-[1px] text-stroke-slate-800 mt-8"
-      >
-        Eliminación de tatuajes
-      </h2>
+      <h2 class="text-xl font-title font-bold mt-8">Eliminación de tatuajes</h2>
 
-      <p class="text-center text-xl">
+      <p class="text-lg">
         Con nuestro equipo de especialistas ubicados en la provincia de
         Barcelona, nuestro equipo está comprometido con servicios de vanguardia
         en eliminación de tatuajes, micropigmentación y tratamiento de manchas
         en la piel.
       </p>
+
+      <a
+        href="/eliminacion-tatuajes"
+        class="text-slate-100 font-title text-xs font-bold bg-slate-800 px-6 pt-4 pb-3 rounded-xl border-2 border-slate-800 hover:text-slate-800 hover:bg-transparent transition-colors mt-10"
+      >
+        MÁS INFORMACIÓN
+      </a>
     </div>
 
-    <div class="flex flex-col items-center p-8 w-1/3">
+    <div
+      class="flex flex-col items-center justify-between p-4 lg:p-12 rounded-xl backdrop-blur bg-slate-50/10 border-2 border-slate-200 shadow-md lg:shadow-xl"
+    >
       <figure>
         <Face />
       </figure>
 
-      <h2
-        class="erease text-xl lg:text-2xl font-title text-stroke-[1px] text-stroke-slate-800 mt-8"
-      >
+      <h2 class="text-xl font-title font-bold mt-8">
         Eliminación de micropigmentación
       </h2>
 
-      <p class="text-center text-xl">
+      <p class="text-lg">
         Con nuestro equipo de especialistas ubicados en la provincia de
         Barcelona, nuestro equipo está comprometido con servicios de vanguardia
         en eliminación de tatuajes, micropigmentación y tratamiento de manchas
         en la piel.
       </p>
+
+      <a
+        href="/eliminacion-micropigmentacion"
+        class="text-slate-100 font-title text-xs font-bold bg-slate-800 px-6 pt-4 pb-3 rounded-xl border-2 border-slate-800 hover:text-slate-800 hover:bg-transparent transition-colors mt-10"
+      >
+        MÁS INFORMACIÓN
+      </a>
     </div>
-    <div class="flex flex-col items-center p-8 w-1/3">
+
+    <div
+      class="flex flex-col items-center justify-between p-4 lg:p-12 rounded-xl backdrop-blur bg-slate-50/10 border-2 border-slate-200 shadow-md lg:shadow-xl"
+    >
       <figure>
         <Dots />
       </figure>
 
-      <h2
-        class="erease text-xl lg:text-2xl font-title text-stroke-[1px] text-stroke-slate-800 mt-8"
-      >
+      <h2 class="text-xl font-title font-bold mt-8">
         Eliminación de manchas en la piel
       </h2>
 
-      <p class="text-center text-xl">
+      <p class="text-lg">
         Con nuestro equipo de especialistas ubicados en la provincia de
         Barcelona, nuestro equipo está comprometido con servicios de vanguardia
         en eliminación de tatuajes, micropigmentación y tratamiento de manchas
         en la piel.
       </p>
+
+      <a
+        href="/eliminacion-manchas-piel"
+        class="text-slate-100 font-title text-xs font-bold bg-slate-800 px-6 pt-4 pb-3 rounded-xl border-2 border-slate-800 hover:text-slate-800 hover:bg-transparent transition-colors mt-10"
+      >
+        MÁS INFORMACIÓN
+      </a>
     </div>
   </article>
 </section>
