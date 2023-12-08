@@ -10,8 +10,5 @@ export default {
       },
     },
   },
-  plugins: [
-    require("tailwindcss-text-fill-stroke"),
-    require("tailwindcss-animated"),
-  ],
+  plugins: [require("tailwindcss-text-fill-stroke")],
 };
