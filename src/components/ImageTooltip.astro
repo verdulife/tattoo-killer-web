@@ -7,15 +7,15 @@ interface Props {
 const { sessions, color: colorInd } = Astro.props;
 
 const colors = {
-  pink: "bg-pink-500 text-white",
-  blue: "bg-blue-500 text-white",
+  pink: "bg-pink-700 text-white",
+  blue: "bg-blue-700 text-white",
   yellow: "bg-yellow-500",
 };
 const color = colors[colorInd];
 ---
 
 <figure
-  class="shadow-xl [&>figcaption]:active:opacity-0 cursor-pointer lg:active:scale-150 transition-transform"
+  class="shadow-xl lg:[&>figcaption]:active:opacity-0 cursor-pointer lg:active:scale-150 transition-transform"
 >
   <slot />
 
