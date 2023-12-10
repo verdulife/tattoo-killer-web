@@ -17,6 +17,9 @@ dependencies:
   gsap:
     specifier: ^3.12.3
     version: 3.12.3
+  mapkick:
+    specifier: ^0.2.6
+    version: 0.2.6
   split-type:
     specifier: ^0.3.4
     version: 0.3.4
@@ -2532,6 +2535,10 @@ packages:
     engines: {node: '>=12'}
     dependencies:
       '@jridgewell/sourcemap-codec': 1.4.15
+    dev: false
+
+  /mapkick@0.2.6:
+    resolution: {integrity: sha512-sDfPCOhTpQrzJc3Yzwg5XOBy5o2TTNEfH2dG2QZM7RUtfQzhY+xErfhQHrQvSOaWbf4zOegPq/dhaWuv2fo4CA==}
     dev: false
 
   /markdown-table@3.0.3:

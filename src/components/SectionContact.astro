@@ -6,32 +6,27 @@ import Whatsapp from "@/assets/icons/Whatsapp.astro";
 
 <section
   id="contact"
-  class="flex flex-col items-center justify-center text-center px-4 pt-10 pb-20 lg:pt-20 lg:pb-48"
+  class="flex flex-col items-center text-center px-4 pt-10 pb-20 lg:pt-20 lg:pb-48"
 >
-  <Pretitle>ENCUENTRANOS EN</Pretitle>
-
-  <article class="max-w-6xl flex flex-col items-center w-full mt-10">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11997.092192438582!2d1.7775927!3d41.2593904!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a38109c40aa65f%3A0xbc21888a72746917!2sULAVET%20Cl%C3%ADnica%20Veterinaria!5e0!3m2!1ses!2ses!4v1700994359675!5m2!1ses!2ses"
-      width="600"
-      height="450"
-      loading="lazy"
-      referrerpolicy="no-referrer"
-      title="TattooKiller en Cataluña"
-      class="w-full rounded-xl border-2 border-slate-50 shadow-md lg:shadow-xl mb-20"
-    ></iframe>
-
-    <Pretitle>PIDE TU CITA</Pretitle>
+  <article class="max-w-6xl flex flex-col lg:flex-row items-center w-full mt-10">
+    <div class="flex flex-col w-full lg:w-1/2">
+      <div
+        id="map"
+        class="w-full aspect-square rounded-xl border-2 border-slate-50 shadow-md lg:shadow-xl mb-20"
+      >
+      </div>
+    </div>
 
     <div
-      class="flex flex-col lg:flex-row items-center justify-center gap-4 p-6 lg:p-8 w-full"
+      class="flex flex-col items-center justify-center gap-4 p-6 lg:p-12 w-full lg:w-1/2"
     >
+      <Pretitle>PIDE TU CITA</Pretitle>
       <a
         href="https://wa.me/34625275713"
         target="_blank"
         rel="external"
         referrerpolicy="no-referrer"
-        class="w-full lg:w-1/3 flex justify-center items-center gap-2 text-slate-100 font-title text-xs font-bold bg-slate-800 px-8 pt-5 pb-4 rounded-xl border-2 border-slate-800 hover:text-slate-800 hover:bg-transparent transition-colors"
+        class="w-full flex justify-center items-center gap-2 text-slate-100 font-title text-xs font-bold bg-slate-800 px-8 pt-5 pb-4 rounded-xl border-2 border-slate-800 hover:text-slate-800 hover:bg-transparent transition-colors"
       >
         <Whatsapp />
          Whatsapp
@@ -39,7 +34,7 @@ import Whatsapp from "@/assets/icons/Whatsapp.astro";
 
       <a
         href="tel:0034625275713"
-        class="w-full lg:w-1/3 flex justify-center items-center gap-2 text-slate-100 font-title text-xs font-bold bg-slate-800 px-8 pt-5 pb-4 rounded-xl border-2 border-slate-800 hover:text-slate-800 hover:bg-transparent transition-colors"
+        class="w-full flex justify-center items-center gap-2 text-slate-100 font-title text-xs font-bold bg-slate-800 px-8 pt-5 pb-4 rounded-xl border-2 border-slate-800 hover:text-slate-800 hover:bg-transparent transition-colors"
       >
         <Phone />
          625 275 713
@@ -47,3 +42,73 @@ import Whatsapp from "@/assets/icons/Whatsapp.astro";
     </div>
   </article>
 </section>
+
+<script>
+  new Mapkick.Map("map", [
+    {
+      latitude: 42.101540,
+      longitude: 1.843810,
+      label: "Berga",
+    },
+    {
+      latitude: 41.503071,
+      longitude: 1.811930,
+      label: "Masquefa",
+    },
+    {
+      latitude: 41.614159,
+      longitude: 0.625800,
+      label: "Lleida",
+    },
+    {
+      latitude: 41.578760,
+      longitude: 1.617190,
+      label: "Igualada",
+    },
+    {
+      latitude: 41.473598,
+      longitude: 1.927680,
+      label: "Martorell",
+    },
+    {
+      latitude: 42.101540,
+      longitude: 1.843810,
+      label: "Berga",
+    },
+    {
+      latitude: 42.101540,
+      longitude: 1.843810,
+      label: "Berga",
+    },
+    {
+      latitude: 42.101540,
+      longitude: 1.843810,
+      label: "Berga",
+    },
+    {
+      latitude: 42.101540,
+      longitude: 1.843810,
+      label: "Berga",
+    },
+    {
+      latitude: 42.101540,
+      longitude: 1.843810,
+      label: "Berga",
+    },
+    {
+      latitude: 42.101540,
+      longitude: 1.843810,
+      label: "Berga",
+    },
+    {
+      latitude: 42.101540,
+      longitude: 1.843810,
+      label: "Berga",
+    },
+    {
+      latitude: 42.101540,
+      longitude: 1.843810,
+      label: "Berga",
+    },
+  ]);
+</script>
