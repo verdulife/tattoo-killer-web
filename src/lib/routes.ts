@@ -12,11 +12,7 @@ export const routes = [
     title: "Equipo",
   },
   {
-    slug: "/resultados",
-    title: "Resultados",
-  },
-  {
-    slug: "/contacto",
-    title: "Contacto",
-  },
+    slug: "/preguntas-frequentes",
+    title: "FAQ",
+  }
 ];

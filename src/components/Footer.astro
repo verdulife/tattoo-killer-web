@@ -2,6 +2,8 @@
 import Logo from "@/assets/Logo.astro";
 import Instagram from "@/assets/icons/Instagram.astro";
 import Tiktok from "@/assets/icons/Tiktok.astro";
+
+const year = new Date().getFullYear();
 ---
 
 <footer class="flex justify-center bg-slate-800 text-slate-100 mt-auto">
@@ -76,7 +78,7 @@ import Tiktok from "@/assets/icons/Tiktok.astro";
 
     <div class="sm:flex sm:items-center sm:justify-between">
       <span class="text-sm sm:text-center text-slate-300">
-        All Rights Reserved TattooKiller © 2023-2024
+        All Rights Reserved TattooKiller © {year}-{year + 1}
       </span>
 
       <div class="flex mt-4 sm:justify-center sm:mt-0">

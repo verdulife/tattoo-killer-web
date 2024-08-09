@@ -1,5 +1,5 @@
 ---
-import OutlineLogo from "@/assets/OutlineLogo.astro";
+import Logo from "@/assets/Logo.astro";
 import Tooltips from "./Tooltips.astro";
 import HomeMarquee from "./HomeMarquee.astro";
 
@@ -15,19 +15,23 @@ const color = colors[Math.floor(Math.random() * colors.length)];
     class="relative flex flex-col items-center z-10 max-w-4xl 2xl:max-w-6xl px-8 text-center"
   >
     <figure class={color}>
-      <OutlineLogo />
+      <Logo />
+      <span class="flex items-center gap-2 text-xl font-title font-extrabold">
+        TattooKiller
+      </span>
     </figure>
 
     <h1
       class="erease font-title text-4xl md:text-5xl 2xl:text-7xl font-bold text-stroke-[1px] lg:text-stroke-2 text-stroke-slate-800 mt-8"
     >
-      Despídete de tus tatuajes rápido y sin dolor ahora
+      Despídete de tus tatuajes con los mejores resultados
     </h1>
 
     <p class="text-lg font-title max-w-4xl mt-4 text-slate-600">
-      Ubicados en Cataluña, en el equipo <strong>TattooKiller</strong>,
-      utilizamos la tecnología más avanzada para garantizar resultados
-      excepcionales.
+      Ubicados en Barcelona, Gerona, Lérida y Tarragona, en el equipo <strong
+        >TattooKiller</strong
+      >, utilizamos la tecnología más avanzada para garantizar los mejores
+      resultados en el mínimo de sesiones.
     </p>
 
     <div class="flex flex-wrap justify-center gap-2 mt-12">

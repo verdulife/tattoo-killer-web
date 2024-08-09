@@ -6,9 +6,11 @@ import Whatsapp from "@/assets/icons/Whatsapp.astro";
 
 <section
   id="contact"
-  class="flex flex-col items-center text-center px-4 pt-10 pb-20 lg:pt-20 lg:pb-48"
+  class="flex flex-col items-center text-center px-4 pt-10 pb-20 lg:pt-20"
 >
-  <article class="max-w-6xl flex flex-col lg:flex-row items-center w-full mt-10">
+  <article
+    class="max-w-6xl flex flex-col lg:flex-row items-center w-full mt-10"
+  >
     <div class="flex flex-col w-full lg:w-1/2">
       <div
         id="map"
@@ -29,7 +31,7 @@ import Whatsapp from "@/assets/icons/Whatsapp.astro";
         class="w-full flex justify-center items-center gap-2 text-slate-100 font-title text-xs font-bold bg-slate-800 px-8 pt-5 pb-4 rounded-xl border-2 border-slate-800 hover:text-slate-800 hover:bg-transparent transition-colors"
       >
         <Whatsapp />
-         Whatsapp
+        Whatsapp
       </a>
 
       <a
@@ -37,7 +39,7 @@ import Whatsapp from "@/assets/icons/Whatsapp.astro";
         class="w-full flex justify-center items-center gap-2 text-slate-100 font-title text-xs font-bold bg-slate-800 px-8 pt-5 pb-4 rounded-xl border-2 border-slate-800 hover:text-slate-800 hover:bg-transparent transition-colors"
       >
         <Phone />
-         625 275 713
+        625 275 713
       </a>
     </div>
   </article>
@@ -46,69 +48,91 @@ import Whatsapp from "@/assets/icons/Whatsapp.astro";
 <script>
   new Mapkick.Map("map", [
     {
-      latitude: 42.101540,
-      longitude: 1.843810,
+      latitude: 42.10154,
+      longitude: 1.84381,
       label: "Berga",
     },
     {
+      latitude: 41.9001344,
+      longitude: 1.8712272,
+      label: "Navàs",
+    },
+    {
       latitude: 41.503071,
-      longitude: 1.811930,
+      longitude: 1.81193,
       label: "Masquefa",
     },
     {
       latitude: 41.614159,
-      longitude: 0.625800,
+      longitude: 0.6258,
       label: "Lleida",
     },
     {
-      latitude: 41.578760,
-      longitude: 1.617190,
+      latitude: 41.57876,
+      longitude: 1.61719,
       label: "Igualada",
     },
     {
       latitude: 41.473598,
-      longitude: 1.927680,
+      longitude: 1.92768,
       label: "Martorell",
     },
+
+    // cambiar lat y lon
     {
-      latitude: 42.101540,
-      longitude: 1.843810,
-      label: "Berga",
+      latitude: 42.10154,
+      longitude: 1.84381,
+      label: "Girona",
     },
     {
-      latitude: 42.101540,
-      longitude: 1.843810,
-      label: "Berga",
+      latitude: 42.10154,
+      longitude: 1.84381,
+      label: "Mataró",
     },
     {
-      latitude: 42.101540,
-      longitude: 1.843810,
-      label: "Berga",
+      latitude: 42.10154,
+      longitude: 1.84381,
+      label: "Sabadell",
     },
     {
-      latitude: 42.101540,
-      longitude: 1.843810,
-      label: "Berga",
+      latitude: 42.10154,
+      longitude: 1.84381,
+      label: "Castellbisbal",
     },
     {
-      latitude: 42.101540,
-      longitude: 1.843810,
-      label: "Berga",
+      latitude: 42.10154,
+      longitude: 1.84381,
+      label: "Vilafranca del Penedès",
     },
     {
-      latitude: 42.101540,
-      longitude: 1.843810,
-      label: "Berga",
+      latitude: 42.10154,
+      longitude: 1.84381,
+      label: "Badalona",
     },
     {
-      latitude: 42.101540,
-      longitude: 1.843810,
-      label: "Berga",
+      latitude: 42.10154,
+      longitude: 1.84381,
+      label: "Barcelona",
     },
     {
-      latitude: 42.101540,
-      longitude: 1.843810,
-      label: "Berga",
+      latitude: 42.10154,
+      longitude: 1.84381,
+      label: "Hospitalet del Llobregat",
+    },
+    {
+      latitude: 42.10154,
+      longitude: 1.84381,
+      label: "Castelldefels",
+    },
+    {
+      latitude: 42.10154,
+      longitude: 1.84381,
+      label: "Vilanova i la Geltrú",
+    },
+    {
+      latitude: 42.10154,
+      longitude: 1.84381,
+      label: "Vilaseca (Tarragona)",
     },
   ]);
 </script>
