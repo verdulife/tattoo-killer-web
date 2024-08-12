@@ -1,0 +1,80 @@
+---
+import Pretitle from "@/components/Pretitle.astro";
+import ServiceCard from "@/components/ServiceCard.astro";
+import Link from "@/components/Link.astro";
+---
+
+<section
+  id="servicios"
+  class="flex flex-col items-center justify-center px-8 py-10 text-center lg:py-20"
+>
+  <Pretitle>NUESTROS SERIVICIOS</Pretitle>
+
+  <article
+    class="mt-10 grid max-w-7xl grid-cols-2 gap-4 text-center lg:grid-cols-5"
+  >
+    <ServiceCard title="Eliminación de tatuajes" price="50€">
+      <p class="text-lg text-slate-600">
+        Descubre nuestra innovadora solución de eliminación de tatuajes en
+        Barcelona, Gerona, Lérida y Tarragona. En el equipo <strong
+          >TattooKiller</strong
+        > ofrecemos un proceso seguro y respetuoso con la salud de tu piel, respaldado
+        por tecnología más avanzada.
+      </p>
+
+      <Link href="/servicios/eliminacion-tatuajes">MAS INFORMACIÓN</Link>
+    </ServiceCard>
+
+    <ServiceCard title="Eliminación de micropigmentación" price="60€">
+      <p class="text-lg text-slate-600">
+        Descubre nuestro servicio de eliminación de micropigmentación en
+        Cataluña. La micropigmentación se encuentra en áreas especialmente
+        delicadas del rostro, razón por la cual este tratamiento se distingue
+        por su enfoque suave y poco invasivo.
+      </p>
+
+      <Link href="/servicios/eliminacion-micropigmentacion">
+        MAS INFORMACIÓN
+      </Link>
+    </ServiceCard>
+
+    <ServiceCard title="Blanqueamiento anal, perianal y corporal" price="60€">
+      <p class="text-lg text-slate-600">
+        Nuestro servicio de blanqueamiento anal, perianal y corporal es el más
+        completo en Cataluña. Este tratamiento es especialmente efectivo para la
+        eliminación el blanqueo corporal, el cual es el principal problema de
+        las personas que tienen el tatuaje.
+      </p>
+
+      <Link href="/servicios/eliminacion-micropigmentacion">
+        MAS INFORMACIÓN
+      </Link>
+    </ServiceCard>
+
+    <ServiceCard title="Hongos en uñas" price="60€">
+      <p class="text-lg text-slate-600">
+        Nuestro servicio de eliminación de hongos en uñas es el más completo en
+        Cataluña. Este tratamiento es especialmente efectivo para la eliminación
+        de hongos en uñas, el cual es el principal problema de las personas que
+        tienen el tatuaje.
+      </p>
+
+      <Link href="/servicios/eliminacion-micropigmentacion">
+        MAS INFORMACIÓN
+      </Link>
+    </ServiceCard>
+
+    <ServiceCard title="Peeling con carbon activo" price="60€">
+      <p class="text-lg text-slate-600">
+        Nuestro servicio de peeling con carbon activo es el más completo en
+        Cataluña. Este tratamiento es especialmente efectivo para la eliminación
+        de hongos en uñas, el cual es el principal problema de las personas que
+        tienen el tatuaje.
+      </p>
+
+      <Link href="/servicios/eliminacion-micropigmentacion">
+        MAS INFORMACIÓN
+      </Link>
+    </ServiceCard>
+  </article>
+</section>

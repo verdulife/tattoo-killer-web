@@ -1,9 +1,9 @@
 # TODO
 
-- [ ] Añadir logotip antiguo  
+- [ ] Añadir logotipo antiguo
 - [ ] Corregir efecto desvanecimiento
 - [ ] Añadir imagenes en nuestros servicios
-- [ ] Añadir nuevos servicios:
+- [x] Añadir nuevos servicios:
   - Blanqueamiento anal, perianal y corporal
   - Eliminación de hongos en uñas
   - Peeling con carbon activo
@@ -15,4 +15,4 @@
 - [ ] Crear pagina equipo.
 - [ ] Crear pagina preguntas frequentes con esta info: https://n1laser.com/faqs/
 - [ ] Usar pdf de la maquina en concreto en FAQ.
-- [ ] Especificar que la maquina laser es algo racista 😂. 
+- [ ] Especificar que la maquina laser es algo racista 😂.

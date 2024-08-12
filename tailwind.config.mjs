@@ -10,5 +10,4 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-text-fill-stroke")],
 };

@@ -1,0 +1,37 @@
+---
+import Link from "@/components/Link.astro";
+import Pretitle from "@/components/Pretitle.astro";
+---
+
+<section
+  id="descubre-como"
+  class="flex flex-col items-center justify-center px-4 py-32 lg:py-40 text-center"
+>
+  <Pretitle>COMO FUNCIONA</Pretitle>
+
+  <article class="mt-10 flex max-w-4xl flex-col gap-8">
+    <h2
+      class="erease text-stroke-[0.03rem] text-stroke-slate-800 font-title text-2xl tracking-tighter lg:text-4xl"
+    >
+      Somos un equipo con formación especializada en el sector en la eliminación
+      de tatuajes y micropigmentación, con más de 10 años de experiencia.
+
+      <br /><br />
+      Empezaremos con una primera consulta para examinar tu tatuaje o micropigmentación
+      para evaluar personalmente tus necesidades.
+      <br /><br />
+      Te daremos información detallada sobre el proceso, la duración de las sesiones
+      y un presupuesto personalizado para tu tratamiento.
+    </h2>
+
+    <p class="mt-10 max-w-4xl text-xl text-slate-600">
+      Mientras tanto si te surgen más preguntas sobre nuestros servicios láser,
+      no dudes visitar nuestra sección de preguntas frecuentes.
+    </p>
+  </article>
+
+  <div class="mt-6 flex flex-wrap justify-center gap-2">
+    <Link href="/preguntas-frequentes"> PREGUNTAS FREQUENTES </Link>
+    <Link href="/contacto" clean> CONSULTA GRATUITA </Link>
+  </div>
+</section>

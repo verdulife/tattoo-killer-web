@@ -15,14 +15,14 @@ const color = colors[colorInd];
 ---
 
 <figure
-  class="shadow-xl lg:[&>figcaption]:active:opacity-0 cursor-pointer lg:active:scale-150 transition-transform"
+  class="cursor-pointer shadow-xl transition-transform lg:active:scale-150 lg:[&>figcaption]:active:opacity-0"
 >
   <slot />
 
   <figcaption
     class=`lg:absolute lg:top-5 lg:left-[90%] ${color} py-3 pl-4 pr-8 lg:rounded-xl lg:rounded-tl-none shadow-lg shadow-black/30 transition-all lg:opacity-0 pointer-events-none select-none mt-1 lg:mt-0`
   >
-    <p class="text-xl lg:text-2xl leading-5 lg:leading-6 whitespace-nowrap">
+    <p class="whitespace-nowrap text-xl leading-4 lg:text-lg lg:leading-5">
       <small>Eliminado en</small>
       <br />
       <strong>{sessions} sesiones</strong>

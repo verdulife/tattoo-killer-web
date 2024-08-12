@@ -6,8 +6,8 @@ import Tiktok from "@/assets/icons/Tiktok.astro";
 const year = new Date().getFullYear();
 ---
 
-<footer class="flex justify-center bg-slate-800 text-slate-100 mt-auto">
-  <div class="w-full max-w-7xl p-8">
+<footer id="contacto" class="flex justify-center bg-slate-800 text-slate-100 mt-auto">
+  <div class="w-full max-w-7xl flex flex-col gap-2 p-8">
     <div class="flex flex-wrap justify-between gap-12 w-full">
       <a href="/">
         <figure class="flex items-center gap-2">
@@ -18,63 +18,7 @@ const year = new Date().getFullYear();
           </figcaption>
         </figure>
       </a>
-
-      <div class="flex flex-col lg:flex-row gap-12">
-        <div class="flex flex-col">
-          <h2 class="mb-4 text-sm font-semibold uppercase text-slate-50">
-            Síguenos en
-          </h2>
-
-          <ul class="text-slate-300 font-medium">
-            <li class="mb-2">
-              <a
-                href="https://www.instagram.com/aitor_tattookiller/"
-                target="_blank"
-                rel="external"
-                referrerpolicy="no-referrer"
-                class="hover:underline"
-              >
-                Instagram
-              </a>
-            </li>
-
-            <li>
-              <a
-                href="https://www.tiktok.com/@aitor_tattookiller"
-                target="_blank"
-                rel="external"
-                referrerpolicy="no-referrer"
-                class="hover:underline"
-              >
-                TikTok
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="flex flex-col">
-          <h2 class="mb-4 text-sm font-semibold uppercase text-slate-50">
-            Legal
-          </h2>
-
-          <ul class="text-slate-300 font-medium">
-            <li class="mb-2">
-              <a href="/legal#politica-de-provacidad" class="hover:underline"
-                >Política de privacidad</a
-              >
-            </li>
-
-            <li>
-              <a href="/legal#terminos-y-condiciones" class="hover:underline"
-                >Términos y condiciones</a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
     </div>
-
-    <hr class="my-10 sm:mx-auto border-slate-600 lg:my-8" />
 
     <div class="sm:flex sm:items-center sm:justify-between">
       <span class="text-sm sm:text-center text-slate-300">
@@ -87,10 +31,10 @@ const year = new Date().getFullYear();
           target="_blank"
           rel="external"
           referrerpolicy="no-referrer"
-          class="text-slate-300 hover:text-slate-50"
+          class="text-slate-300 hover:text-slate-50 flex items-center gap-2"
         >
           <Instagram />
-          <span class="sr-only">Página de Instagram</span>
+          <span>Instagram</span>
         </a>
 
         <a
@@ -98,10 +42,10 @@ const year = new Date().getFullYear();
           target="_blank"
           rel="external"
           referrerpolicy="no-referrer"
-          class="text-slate-300 hover:text-slate-50 ms-5"
+          class="text-slate-300 hover:text-slate-50 ms-5 flex items-center gap-2"
         >
           <Tiktok />
-          <span class="sr-only">Página de TikTok</span>
+          <span>TikTok</span>
         </a>
       </div>
     </div>

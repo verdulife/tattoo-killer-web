@@ -3,38 +3,41 @@ import { routes } from "@/lib/routes";
 import Logo from "@/assets/Logo.astro";
 ---
 
-<header class="fixed top-0 left-0 flex justify-center z-50 w-full p-4">
+<header class="fixed left-0 top-0 z-50 flex w-full justify-center p-4">
   <nav
-    class="flex flex-col lg:flex-row justify-between items-center backdrop-blur px-4 lg:px-8 py-4 max-w-6xl w-full rounded-xl bg-slate-50/70 border border-slate-200"
+    class="flex w-full max-w-6xl flex-col items-center justify-between rounded-xl border border-slate-200 bg-slate-50/70 px-4 py-4 backdrop-blur lg:flex-row lg:px-8"
   >
-    <div class="flex items-center justify-between w-full lg:w-auto">
+    <div class="flex w-full items-center justify-between lg:w-auto">
       <a href="/">
-        <span class="flex items-center gap-2 text-xl font-title font-extrabold">
+        <span class="flex items-center gap-2 font-title text-xl font-bold">
           <Logo width={50} /> TattooKiller
         </span>
       </a>
 
       <button
         id="menuBtn"
-        class="flex lg:hidden flex-col w-10 h-9 justify-between items-end p-2"
+        class="flex h-9 w-10 flex-col items-end justify-between p-2 lg:hidden"
       >
-        <span class="w-full h-[3px] rounded-full bg-slate-800 transition-all"></span>
-        <span class="w-1/2 h-[3px] rounded-full bg-slate-800 transition-all"></span>
-        <span class="w-3/4 h-[3px] rounded-full bg-slate-800 transition-all"></span>
+        <span class="h-[3px] w-full rounded-full bg-slate-800 transition-all"
+        ></span>
+        <span class="h-[3px] w-1/2 rounded-full bg-slate-800 transition-all"
+        ></span>
+        <span class="h-[3px] w-3/4 rounded-full bg-slate-800 transition-all"
+        ></span>
         <span class="sr-only">Botón menú</span>
       </button>
     </div>
 
     <ul
       id="menu"
-      class="hidden lg:flex flex-col lg:flex-row items-center p-8 lg:p-0 w-full lg:w-auto overflow-hidden"
+      class="hidden w-full flex-col items-center overflow-hidden p-8 lg:flex lg:w-auto lg:flex-row lg:p-0"
     >
       {
         routes.map(({ slug, title }) => (
           <li class="flex w-full lg:w-auto">
             <a
               href={slug}
-              class="w-full lg:w-auto text-2xl p-6 lg:py-2 lg:px-6 lg:text-lg font-semibold border lg:border-2 border-slate-200 shadow-lg lg:shadow-none lg:border-transparent lg:hover:border-slate-600 transition-colors rounded-lg mt-3 lg:mt-0 bg-slate-50 lg:bg-transparent"
+              class="font-title mt-3 w-full rounded-lg border border-slate-200 bg-slate-50 p-6 text-2xl shadow-lg transition-colors lg:mt-0 lg:w-auto lg:border-2 lg:border-transparent lg:bg-transparent lg:px-6 lg:py-2 lg:text-lg lg:shadow-none lg:hover:border-slate-600"
             >
               {title}
             </a>

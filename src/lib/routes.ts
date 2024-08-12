@@ -14,5 +14,9 @@ export const routes = [
   {
     slug: "/preguntas-frequentes",
     title: "FAQ",
+  },
+  {
+    slug: "#contacto",
+    title: "Contacto",
   }
 ];

@@ -1,0 +1,43 @@
+---
+import Logo from "@/assets/Logo.astro";
+import Tooltips from "@/components/Tooltips.astro";
+import HomeMarquee from "@/components/HomeMarquee.astro";
+import Link from "@/components/Link.astro";
+
+const colors = ["text-pink-700", "text-blue-700", "text-yellow-500"];
+const color = colors[Math.floor(Math.random() * colors.length)];
+---
+
+<section
+  id="inicio"
+  class="relative flex min-h-screen flex-col items-center pt-40 lg:pt-44"
+>
+  <article
+    class="relative z-10 flex w-full max-w-4xl flex-col items-center px-8 text-center 2xl:max-w-5xl"
+  >
+    <figure class:list={["flex flex-col items-center gap-2", color]}>
+      <Logo />
+      <span class="font-title text-xl font-bold">TattooKiller</span>
+    </figure>
+
+    <h1 class="mt-8 font-title text-4xl font-bold md:text-5xl 2xl:text-6xl">
+      Despídete de tus tatuajes con los mejores resultados
+    </h1>
+
+    <p class="mt-4 max-w-4xl text-xl text-slate-600">
+      Ubicados en Barcelona, Gerona, Lérida y Tarragona, en el equipo <strong
+        >TattooKiller</strong
+      >, utilizamos la tecnología más avanzada para garantizar los mejores
+      resultados en el mínimo de sesiones.
+    </p>
+
+    <div class="mt-12 flex flex-wrap items-center justify-center">
+      <Link href="#descubre-como"> DESCUBRE COMO </Link>
+      <Link href="#servicios" clean> NUESTROS SERVICIOS </Link>
+    </div>
+
+    <Tooltips />
+  </article>
+
+  <HomeMarquee />
+</section>

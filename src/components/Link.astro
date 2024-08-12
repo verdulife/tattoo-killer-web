@@ -1,0 +1,18 @@
+---
+export interface Props {
+  href: string;
+  clean?: boolean;
+}
+
+const { href, clean } = Astro.props;
+---
+
+<a
+  href={href}
+  class:list={[
+    "rounded bg-slate-800 px-6 pb-3 pt-4 font-title text-xs text-slate-100 transition-colors hover:bg-slate-950 ",
+    clean && "!hover:text-slate-950 !bg-transparent !text-slate-800 ",
+  ]}
+>
+  <slot />
+</a>
