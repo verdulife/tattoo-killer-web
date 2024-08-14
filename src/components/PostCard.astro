@@ -1,4 +1,6 @@
 ---
+import Reader from "@/assets/icons/Reader.astro";
+
 interface Props {
   src: string;
   alt: string;
@@ -8,7 +10,7 @@ const { src, alt } = Astro.props;
 ---
 
 <li
-  class="relative mb-10 flex flex-col max-w-sm gap-2 overflow-hidden rounded-xl border-2 border-slate-200 bg-slate-50/10 bg-white shadow-md backdrop-blur md:mb-0 lg:shadow-xl"
+  class="relative mb-10 flex max-w-sm flex-col gap-2 overflow-hidden rounded-xl border-2 border-neutral-200 bg-neutral-50/10 bg-white shadow-md backdrop-blur md:mb-0 lg:shadow-xl"
 >
   <picture>
     <img
@@ -18,11 +20,15 @@ const { src, alt } = Astro.props;
       height="400"
       loading="lazy"
       decoding="async"
+      class="size-60"
     />
   </picture>
 
-  <header class="flex flex-col p-8">
-    <p class="line-clamp-4 text-slate-600 lg:line-clamp-6 text-lg">
+  <header
+    class="absolute inset-0 flex flex-col gap-2 bg-neutral-950/70 p-4 text-neutral-100 opacity-0 backdrop-blur-sm transition-opacity hover:opacity-100 lg:p-8"
+  >
+    <Reader class="mt-auto size-14 lg:size-20" />
+    <p class="line-clamp-4 text-lg lg:line-clamp-6">
       {alt}
     </p>
   </header>

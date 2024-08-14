@@ -10,13 +10,13 @@ const { title, price } = Astro.props;
 
 <div
   class:list={[
-    "flex flex-col items-center justify-between rounded-xl border-2 border-slate-200 bg-slate-50/10 bg-white px-4 py-8 shadow-md backdrop-blur lg:p-12 lg:shadow-xl",
+    "flex flex-col items-center justify-between rounded-xl border-2 border-neutral-200 bg-neutral-50/10 bg-white px-4 py-8 shadow-md backdrop-blur lg:p-12 lg:shadow-xl",
     Astro.props.class,
   ]}
 >
   <h2 class="mt-8 font-title text-xl font-bold">{title}</h2>
 
-  <h3 class="my-4 border-b border-t border-slate-400 p-4 font-title text-xs">
+  <h3 class="my-4 border-b border-t border-neutral-400 p-4 font-title text-xs">
     A PARTIR DE <strong>{price}</strong>
   </h3>
 

@@ -1,26 +1,27 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import Contact from "@/sections/Contact.astro";
 ---
 
-<Layout title="Servicios | TattooKiller">
-  <section
-    class="relative flex flex-col items-center pt-40 lg:pt-52"
-  >
+<Layout title="Eliminación de micropigmentación | TattooKiller">
+  <section class="relative flex flex-col items-center pt-40 lg:pt-52">
     <article
-      class="relative flex flex-col items-center z-10 max-w-4xl 2xl:max-w-6xl px-8 text-center gap-8"
+      class="relative z-10 flex max-w-4xl flex-col items-center gap-8 px-8 text-center 2xl:max-w-6xl"
     >
       <h1
-        class="font-title text-4xl md:text-5xl 2xl:text-7xl font-bold text-stroke-[1px] lg:text-stroke-2 text-stroke-slate-800 mt-8"
+        class="text-stroke-[1px] lg:text-stroke-2 text-stroke-neutral-800 mt-8 font-title text-4xl font-bold md:text-5xl 2xl:text-7xl"
       >
         Página en construcción
       </h1>
 
       <a
         href="/"
-        class="text-slate-100 font-title text-xs font-bold bg-slate-800 px-8 pt-5 pb-4 rounded-xl border-2 border-slate-800 hover:text-slate-800 hover:bg-transparent transition-colors"
+        class="rounded-xl border-2 border-neutral-800 bg-neutral-800 px-8 pb-4 pt-5 font-title text-xs font-bold text-neutral-100 transition-colors hover:bg-transparent hover:text-neutral-800"
       >
         VOLVER AL INICIO
       </a>
     </article>
   </section>
+
+  <Contact />
 </Layout>

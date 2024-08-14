@@ -1,56 +1,29 @@
 ---
 import ReviewCard from "@/components/ReviewCard.astro";
+import Link from "@/components/Link.astro";
 import { reviews } from "@/lib/reviews";
-
-const seconds = "30s";
-const gap = "1rem";
-const url =
-  "https://www.google.com/search?sca_esv=600101668&sxsrf=ACQVn0-VRvvoSNZGeVGb5rUcBx7mLblaEQ:1705776844360&uds=AMwkrPsuqfZyfNE5WgHaOCZM18B4EqsMLp49zMsu-7dLMhzya7mhXSyXjU-e2O0lg806Q041MFJrvjpC_CrgRtjUq0OXJGmPB1rX7sEV8c4NDMMEccsD57c6NVlrvPwqbOvKDKg66Ff3E8O9KhpC_hHwBJM3n_qzuA&si=AKbGX_rcuucMgom2rba1cdwsvM2SVoIkP2btyqGMV4t0GuHIs4sGV_1tpuqR0YHG4Rzd9Sc95ZESnZyY3JjXOOJ8CS0vkkUal54BGRkqTIr0TFTZaoNT8hA%3D&q=Aitor+TattooKiller+-+Eliminaci%C3%B3n+de+Tatuajes+Rese%C3%B1as&sa=X&ved=2ahUKEwj8zv720eyDAxXgUaQEHfdRAsgQ3PALegQIcRAF&biw=1920&bih=981&dpr=1";
 ---
 
-<section class="flex flex-col items-center gap-12 py-10 lg:py-20">
-  <h2
-    class="erease max-w-4xl mt-10 text-2xl lg:text-4xl font-title tracking-tighter text-stroke-[0.03rem] text-stroke-slate-800 text-center px-4"
-  >
-    Nuestros clientes hablan por nosotros
-  </h2>
+<section class="mx-auto flex flex-col lg:flex-row max-w-7xl lg:items-center gap-12 lg:py-20 w-full px-4 lg:px-0">
+  <div class="flex shrink-0 flex-col items-start gap-8 w-full">
+    <h2 class="mt-10 w-full max-w-xl font-title text-4xl lg:text-6xl">
+      Nuestros clientes hablan por nosotros
+    </h2>
 
-  <main class="relative flex w-full overflow-hidden">
-    <ul class="flex shrink-0 pb-12">
+    <Link
+      href="https://www.google.com/search?sa=X&cs=0&hl=es-ES&sca_esv=d621e0682869cae1&tbm=lcl&sxsrf=ADLYWIISIvWZsAcbYnU6s0itBIeubL9PQQ:1723672375094&q=Aitor+TattooKiller+-+Eliminaci%C3%B3n+de+Tatuajes+Rese%C3%B1as&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxK2MDGxMDIyMjEwNDMxMrc0NjE33sDI-IrRzDGzJL9IISSxpCQ_3zszJye1SEFXwTUnMzczLzE58_DmPIWUVJB0aWJWarFCUGpx6uGNicWLWMnUCADAjKx7jAAAAA&rldimm=8448222401642793473&ved=2ahUKEwi1rIH9u_WHAxWdgv0HHUhUPfEQ9fQKegQINBAF&biw=1920&bih=965&dpr=1#lkt=LocalPoiReviews"
+      target="_blank"
+    >
+      VER MÁS RESEÑAS
+    </Link>
+  </div>
+
+  <main class="relative flex">
+    <ul class="flex shrink-0 py-2 lg:py-12 gap-4">
       {reviews.map((item) => <ReviewCard {...item} />)}
     </ul>
-    <ul class="flex shrink-0 pb-12">
+    <ul class="flex shrink-0 pb-12 gap-4">
       {reviews.map((item) => <ReviewCard {...item} />)}
     </ul>
   </main>
 </section>
-
-<style define:vars={{ seconds, gap }}>
-  main {
-    gap: var(--gap);
-  }
-
-  ul {
-    animation: marquee var(--seconds) linear infinite;
-    gap: var(--gap);
-  }
-
-  main:hover > ul,
-  main:focus > ul,
-  main:active > ul {
-    animation-play-state: paused;
-  }
-
-  .reverse {
-    animation-direction: reverse;
-  }
-
-  @keyframes marquee {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(calc(-100% - var(--gap)));
-    }
-  }
-</style>

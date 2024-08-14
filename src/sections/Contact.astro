@@ -2,51 +2,55 @@
 import Pretitle from "@/components/Pretitle.astro";
 import Phone from "@/assets/icons/Phone.astro";
 import Whatsapp from "@/assets/icons/Whatsapp.astro";
+import Link from "@/components/Link.astro";
 ---
 
 <section
   id="contact"
-  class="flex flex-col items-center px-4 pb-20 pt-10 text-center lg:pt-20"
+  class="mt-32 flex flex-col items-center bg-neutral-800 px-4 pt-10 text-center text-neutral-100 lg:px-10 lg:pt-20"
 >
-  <article
-    class="mt-10 flex w-full max-w-6xl flex-col items-center lg:flex-row"
-  >
+  <article class="flex w-full flex-col items-center">
+    <Pretitle class="!text-neutral-400">PIDE TU CITA</Pretitle>
+    <h2 class="mt-10 max-w-xl font-title text-3xl lg:text-5xl">
+      Contacta con nosotros para hacer tu consulta hoy mismo
+    </h2>
+
     <div
-      class="relative flex aspect-[4/3] w-full flex-col overflow-hidden rounded-xl bg-slate-800 lg:w-1/2"
+      class="flex w-full max-w-6xl flex-wrap items-center justify-center gap-4 p-6 lg:w-1/2 lg:p-12"
+    >
+      <Link
+        href="https://wa.me/34625275713"
+        target="_blank"
+        rel="external"
+        referrerpolicy="no-referrer"
+        class="flex min-w-56 items-center justify-center gap-2 bg-neutral-100 text-neutral-800 hover:bg-neutral-300 hover:text-neutral-800"
+      >
+        <Whatsapp />
+        Whatsapp
+      </Link>
+
+      <Link
+        href="tel:0034625275713"
+        class="flex min-w-56 items-center justify-center gap-2 bg-neutral-100 text-neutral-800 hover:bg-neutral-300 hover:text-neutral-800"
+      >
+        <Phone />
+        625 275 713
+      </Link>
+    </div>
+
+    <div
+      class="pointer-events-none relative mt-10 flex aspect-video w-full flex-col overflow-hidden rounded-xl bg-neutral-800 shadow-xl shadow-neutral-950/30 lg:aspect-[32/9]"
     >
       <iframe
         src="https://www.google.com/maps/d/u/0/embed?mid=1HMVXLNL5nIQ7Ovdq4C7feDA5axJA1UY&ehbc=2E312F&noprof=1"
         width="100%"
         height="100%"
         style="border:0"
+        loading="lazy"
         allowfullscreen
-        class="absolute top-[-46px] bottom-[-14px] h-[calc(100%+46px+14px)] w-full" 
+        class="absolute bottom-[-14px] left-[-46px] top-[-46px] h-[calc(100%+46px+14px)] w-[calc(100%+46px)] opacity-60"
       >
       </iframe>
-    </div>
-
-    <div
-      class="flex w-full flex-col items-center justify-center gap-4 p-6 lg:w-1/2 lg:p-12"
-    >
-      <Pretitle>PIDE TU CITA</Pretitle>
-      <a
-        href="https://wa.me/34625275713"
-        target="_blank"
-        rel="external"
-        referrerpolicy="no-referrer"
-        class="flex w-full items-center justify-center gap-2 rounded-xl border-2 border-slate-800 bg-slate-800 px-8 pb-4 pt-5 font-title text-xs font-bold text-slate-100 transition-colors hover:bg-transparent hover:text-slate-800"
-      >
-        <Whatsapp />
-        Whatsapp
-      </a>
-
-      <a
-        href="tel:0034625275713"
-        class="flex w-full items-center justify-center gap-2 rounded-xl border-2 border-slate-800 bg-slate-800 px-8 pb-4 pt-5 font-title text-xs font-bold text-slate-100 transition-colors hover:bg-transparent hover:text-slate-800"
-      >
-        <Phone />
-        625 275 713
-      </a>
     </div>
   </article>
 </section>

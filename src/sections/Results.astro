@@ -9,7 +9,7 @@ const gap = "1rem";
 
 <section class="flex flex-col items-center gap-4 py-10 lg:py-20">
   <h2
-    class="erease text-stroke-[0.03rem] text-stroke-slate-800 mt-10 max-w-4xl px-4 text-center font-title text-2xl tracking-tighter lg:text-4xl"
+    class="mt-10 max-w-4xl px-4 text-center font-title text-2xl tracking-tighter lg:text-4xl"
   >
     Publicaciones y resultados
   </h2>
@@ -18,7 +18,7 @@ const gap = "1rem";
     VER RESULTADOS
   </Link>
 
-  <main class="relative mt-8 flex w-full overflow-hidden">
+  <main class="mt-8 flex w-full overflow-hidden">
     <ul class="flex shrink-0 pb-12">
       {posts.map((item) => <PostCard {...item} />)}
     </ul>
@@ -38,22 +38,19 @@ const gap = "1rem";
     gap: var(--gap);
   }
 
-  main:hover > ul,
-  main:focus > ul,
-  main:active > ul {
+  main:hover > ul {
     animation-play-state: paused;
   }
-
-  .reverse {
+  < g .reverse {
     animation-direction: reverse;
   }
 
   @keyframes marquee {
     0% {
-      transform: translate3D(0, 0, 0);
+      transform: translate3d(0, 0, 0);
     }
     100% {
-      transform: translate3D(calc(-100% - var(--gap)), 0, 0);
+      transform: translate3d(calc(-100% - var(--gap)), 0, 0);
     }
   }
 </style>

@@ -12,7 +12,7 @@ const seconds = "50s";
 const gap = "0.5rem";
 ---
 
-<main class="flex lg:hidden relative w-full overflow-hidden mt-20">
+<main class="relative mt-20 flex w-full overflow-hidden lg:hidden">
   <ul class="flex shrink-0">
     <li>
       <ImageTooltip sessions={5} color="blue">
@@ -111,10 +111,10 @@ const gap = "0.5rem";
 
   @keyframes marquee {
     0% {
-      transform: translateX(0);
+      transform: translate3d(0, 0, 0);
     }
     100% {
-      transform: translateX(calc(-100% - var(--gap)));
+      transform: translate3d(calc(-100% - var(--gap)), 0, 0);
     }
   }
 </style>
