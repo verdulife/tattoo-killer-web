@@ -10,7 +10,8 @@ import Logo from "@/assets/Logo.astro";
     <div class="flex w-full items-center justify-between lg:w-auto">
       <a href="/">
         <span class="flex items-center gap-2 font-title text-xl font-bold">
-          <Logo width={50} /> TattooKiller
+          <Logo width={50} />
+          <span class="flex items-center">TattooKiller<sup class="scale-50">®</sup></span>
         </span>
       </a>
 
@@ -37,7 +38,7 @@ import Logo from "@/assets/Logo.astro";
           <li class="flex w-full lg:w-auto">
             <a
               href={slug}
-              class="font-title mt-3 w-full rounded-lg border border-slate-200 bg-slate-50 p-6 text-2xl shadow-lg transition-colors lg:mt-0 lg:w-auto lg:border-2 lg:border-transparent lg:bg-transparent lg:px-6 lg:py-2 lg:text-lg lg:shadow-none lg:hover:border-slate-600"
+              class="mt-3 w-full rounded-lg border border-slate-200 bg-slate-50 p-6 font-title text-2xl shadow-lg transition-colors lg:mt-0 lg:w-auto lg:border-2 lg:border-transparent lg:bg-transparent lg:px-6 lg:py-2 lg:text-lg lg:shadow-none lg:hover:border-slate-600"
             >
               {title}
             </a>

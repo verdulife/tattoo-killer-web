@@ -1,0 +1,29 @@
+---
+interface Props {
+  src: string;
+  alt: string;
+}
+
+const { src, alt } = Astro.props;
+---
+
+<li
+  class="relative mb-10 flex flex-col max-w-sm gap-2 overflow-hidden rounded-xl border-2 border-slate-200 bg-slate-50/10 bg-white shadow-md backdrop-blur md:mb-0 lg:shadow-xl"
+>
+  <picture>
+    <img
+      src={src}
+      alt={alt}
+      width="400"
+      height="400"
+      loading="lazy"
+      decoding="async"
+    />
+  </picture>
+
+  <header class="flex flex-col p-8">
+    <p class="line-clamp-4 text-slate-600 lg:line-clamp-6 text-lg">
+      {alt}
+    </p>
+  </header>
+</li>

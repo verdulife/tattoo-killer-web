@@ -2,9 +2,10 @@
 export interface Props {
   href: string;
   clean?: boolean;
+  target?: string;
 }
 
-const { href, clean } = Astro.props;
+const { href, clean, target } = Astro.props;
 ---
 
 <a
@@ -13,6 +14,7 @@ const { href, clean } = Astro.props;
     "rounded bg-slate-800 px-6 pb-3 pt-4 font-title text-xs text-slate-100 transition-colors hover:bg-slate-950 ",
     clean && "!hover:text-slate-950 !bg-transparent !text-slate-800 ",
   ]}
+  target={target}
 >
   <slot />
 </a>

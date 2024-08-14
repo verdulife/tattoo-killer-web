@@ -1,15 +1,15 @@
 # TODO
 
 - [ ] Añadir logotipo antiguo
-- [ ] Corregir efecto desvanecimiento
+- [x] Corregir efecto desvanecimiento
 - [ ] Añadir imagenes en nuestros servicios
 - [x] Añadir nuevos servicios:
   - Blanqueamiento anal, perianal y corporal
   - Eliminación de hongos en uñas
   - Peeling con carbon activo
-- [ ] Añadir antes de reviews nueva serccion de resultados (posts de instagram, buscar emoji para descartar post).
+- [x] Añadir antes de reviews nueva serccion de resultados (posts de instagram, buscar emoji para descartar post).
 - [ ] Reacer seccion contacto/mapa.
-- [ ] Revisar si se puede borrar la seccion de legal.
+- [x] Revisar si se puede borrar la seccion de legal.
 - [ ] Añadir simbolor de ® en logotipo.
 - [ ] Crear pagina de cada servicio.
 - [ ] Crear pagina equipo.
