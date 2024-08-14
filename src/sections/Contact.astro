@@ -6,21 +6,21 @@ import Whatsapp from "@/assets/icons/Whatsapp.astro";
 
 <section
   id="contact"
-  class="flex flex-col items-center text-center px-4 pt-10 pb-20 lg:pt-20"
+  class="flex flex-col items-center px-4 pb-20 pt-10 text-center lg:pt-20"
 >
   <article
-    class="max-w-6xl flex flex-col lg:flex-row items-center w-full mt-10"
+    class="mt-10 flex w-full max-w-6xl flex-col items-center lg:flex-row"
   >
-    <div class="flex flex-col w-full lg:w-1/2">
+    <div class="flex w-full flex-col lg:w-1/2">
       <div
         id="map"
-        class="w-full aspect-square rounded-xl border-2 border-slate-50 shadow-md lg:shadow-xl mb-20"
+        class="mb-20 aspect-square w-full rounded-xl border-2 border-slate-50 shadow-md lg:shadow-xl"
       >
       </div>
     </div>
 
     <div
-      class="flex flex-col items-center justify-center gap-4 p-6 lg:p-12 w-full lg:w-1/2"
+      class="flex w-full flex-col items-center justify-center gap-4 p-6 lg:w-1/2 lg:p-12"
     >
       <Pretitle>PIDE TU CITA</Pretitle>
       <a
@@ -28,7 +28,7 @@ import Whatsapp from "@/assets/icons/Whatsapp.astro";
         target="_blank"
         rel="external"
         referrerpolicy="no-referrer"
-        class="w-full flex justify-center items-center gap-2 text-slate-100 font-title text-xs font-bold bg-slate-800 px-8 pt-5 pb-4 rounded-xl border-2 border-slate-800 hover:text-slate-800 hover:bg-transparent transition-colors"
+        class="flex w-full items-center justify-center gap-2 rounded-xl border-2 border-slate-800 bg-slate-800 px-8 pb-4 pt-5 font-title text-xs font-bold text-slate-100 transition-colors hover:bg-transparent hover:text-slate-800"
       >
         <Whatsapp />
         Whatsapp
@@ -36,7 +36,7 @@ import Whatsapp from "@/assets/icons/Whatsapp.astro";
 
       <a
         href="tel:0034625275713"
-        class="w-full flex justify-center items-center gap-2 text-slate-100 font-title text-xs font-bold bg-slate-800 px-8 pt-5 pb-4 rounded-xl border-2 border-slate-800 hover:text-slate-800 hover:bg-transparent transition-colors"
+        class="flex w-full items-center justify-center gap-2 rounded-xl border-2 border-slate-800 bg-slate-800 px-8 pb-4 pt-5 font-title text-xs font-bold text-slate-100 transition-colors hover:bg-transparent hover:text-slate-800"
       >
         <Phone />
         625 275 713
@@ -45,7 +45,21 @@ import Whatsapp from "@/assets/icons/Whatsapp.astro";
   </article>
 </section>
 
-<script>
+<style>
+  @import "https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.css";
+</style>
+
+<script type="module">
+  import mapboxgl from "https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.js";
+  import Mapkick from "@/lib/mapkick";
+
+  mapboxgl.accessToken =
+    "pk.eyJ1IjoidmVyZHVsaWZlIiwiYSI6ImNscHpha3E5MjEyYzAya3BmM2d0cHQ1bzMifQ.lRQ4hbGqMVd6-8PYqYCTGA";
+  Mapkick.options = {
+    style: "mapbox://styles/verdulife/clpzb0ovq005b01qs9l68d7a8",
+    zoom: 6.8,
+  };
+
   new Mapkick.Map("map", [
     {
       latitude: 42.10154,
