@@ -13,6 +13,6 @@
 - [x] Añadir simbolor de ® en logotipo.
 - [ ] Crear pagina de cada servicio.
 - [ ] Crear pagina equipo.
-- [ ] Crear pagina preguntas frequentes con esta info: https://n1laser.com/faqs/
+- [x] Crear pagina preguntas frequentes con esta info: https://n1laser.com/faqs/
 - [ ] Usar pdf de la maquina en concreto en FAQ.
 - [ ] Especificar que la maquina laser es algo racista 😂.
