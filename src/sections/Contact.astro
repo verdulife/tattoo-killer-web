@@ -11,12 +11,18 @@ import Whatsapp from "@/assets/icons/Whatsapp.astro";
   <article
     class="mt-10 flex w-full max-w-6xl flex-col items-center lg:flex-row"
   >
-    <div class="flex w-full flex-col lg:w-1/2">
-      <div
-        id="map"
-        class="mb-20 aspect-square w-full rounded-xl border-2 border-slate-50 shadow-md lg:shadow-xl"
+    <div
+      class="relative flex aspect-[4/3] w-full flex-col overflow-hidden rounded-xl bg-slate-800 lg:w-1/2"
+    >
+      <iframe
+        src="https://www.google.com/maps/d/u/0/embed?mid=1HMVXLNL5nIQ7Ovdq4C7feDA5axJA1UY&ehbc=2E312F&noprof=1"
+        width="100%"
+        height="100%"
+        style="border:0"
+        allowfullscreen
+        class="absolute inset-0 top-[-46px] h-[calc(100%+46px)] w-full"
       >
-      </div>
+      </iframe>
     </div>
 
     <div
@@ -44,109 +50,3 @@ import Whatsapp from "@/assets/icons/Whatsapp.astro";
     </div>
   </article>
 </section>
-
-<style>
-  @import "https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.css";
-</style>
-
-<script type="module">
-  import mapboxgl from "https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.js";
-  import Mapkick from "@/lib/mapkick";
-
-  mapboxgl.accessToken =
-    "pk.eyJ1IjoidmVyZHVsaWZlIiwiYSI6ImNscHpha3E5MjEyYzAya3BmM2d0cHQ1bzMifQ.lRQ4hbGqMVd6-8PYqYCTGA";
-  Mapkick.options = {
-    style: "mapbox://styles/verdulife/clpzb0ovq005b01qs9l68d7a8",
-    zoom: 6.8,
-  };
-
-  new Mapkick.Map("map", [
-    {
-      latitude: 42.10154,
-      longitude: 1.84381,
-      label: "Berga",
-    },
-    {
-      latitude: 41.9001344,
-      longitude: 1.8712272,
-      label: "Navàs",
-    },
-    {
-      latitude: 41.503071,
-      longitude: 1.81193,
-      label: "Masquefa",
-    },
-    {
-      latitude: 41.614159,
-      longitude: 0.6258,
-      label: "Lleida",
-    },
-    {
-      latitude: 41.57876,
-      longitude: 1.61719,
-      label: "Igualada",
-    },
-    {
-      latitude: 41.473598,
-      longitude: 1.92768,
-      label: "Martorell",
-    },
-
-    // cambiar lat y lon
-    {
-      latitude: 42.10154,
-      longitude: 1.84381,
-      label: "Girona",
-    },
-    {
-      latitude: 42.10154,
-      longitude: 1.84381,
-      label: "Mataró",
-    },
-    {
-      latitude: 42.10154,
-      longitude: 1.84381,
-      label: "Sabadell",
-    },
-    {
-      latitude: 42.10154,
-      longitude: 1.84381,
-      label: "Castellbisbal",
-    },
-    {
-      latitude: 42.10154,
-      longitude: 1.84381,
-      label: "Vilafranca del Penedès",
-    },
-    {
-      latitude: 42.10154,
-      longitude: 1.84381,
-      label: "Badalona",
-    },
-    {
-      latitude: 42.10154,
-      longitude: 1.84381,
-      label: "Barcelona",
-    },
-    {
-      latitude: 42.10154,
-      longitude: 1.84381,
-      label: "Hospitalet del Llobregat",
-    },
-    {
-      latitude: 42.10154,
-      longitude: 1.84381,
-      label: "Castelldefels",
-    },
-    {
-      latitude: 42.10154,
-      longitude: 1.84381,
-      label: "Vilanova i la Geltrú",
-    },
-    {
-      latitude: 42.10154,
-      longitude: 1.84381,
-      label: "Vilaseca (Tarragona)",
-    },
-  ]);
-</script>
