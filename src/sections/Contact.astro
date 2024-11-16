@@ -12,7 +12,7 @@ import Link from "@/components/Link.astro";
   <article class="flex w-full flex-col items-center">
     <Pretitle class="!text-neutral-400">PIDE TU CITA</Pretitle>
     <h2 class="mt-10 max-w-xl font-title text-3xl lg:text-5xl">
-      Contacta con nosotros para hacer tu consulta hoy mismo
+      Contacta con nosotros
     </h2>
 
     <div
@@ -23,23 +23,42 @@ import Link from "@/components/Link.astro";
         target="_blank"
         rel="external"
         referrerpolicy="no-referrer"
-        class="flex min-w-56 items-center justify-center gap-2 bg-neutral-100 text-neutral-800 hover:bg-neutral-300 hover:text-neutral-800"
+        class="!hover:bg-neutral-300 !hover:text-neutral-800 flex min-w-56 items-center justify-center gap-2 !bg-neutral-100 !text-neutral-800"
       >
         <Whatsapp />
-        Whatsapp
+        Whatsapp Aitor
       </Link>
 
       <Link
         href="tel:0034625275713"
-        class="flex min-w-56 items-center justify-center gap-2 bg-neutral-100 text-neutral-800 hover:bg-neutral-300 hover:text-neutral-800"
+        class="!hover:bg-neutral-300 !hover:text-neutral-800 flex min-w-56 items-center justify-center gap-2 !bg-neutral-100 !text-neutral-800"
       >
         <Phone />
         625 275 713
       </Link>
+
+      <Link
+        href="https://wa.me/34662672030"
+        target="_blank"
+        rel="external"
+        referrerpolicy="no-referrer"
+        class="!hover:bg-neutral-300 !hover:text-neutral-800 flex min-w-56 items-center justify-center gap-2 !bg-neutral-100 !text-neutral-800"
+      >
+        <Whatsapp />
+        Whatsapp Isa
+      </Link>
+
+      <Link
+        href="tel:0034662672030"
+        class="!hover:bg-neutral-300 !hover:text-neutral-800 flex min-w-56 items-center justify-center gap-2 !bg-neutral-100 !text-neutral-800"
+      >
+        <Phone />
+        662 672 030
+      </Link>
     </div>
 
     <div
-      class="pointer-events-none relative mt-10 flex aspect-video w-full flex-col overflow-hidden rounded-xl bg-neutral-800 shadow-xl shadow-neutral-950/30 lg:aspect-[32/9]"
+      class="max-w-4xl relative mt-10 flex aspect-[3/2] w-full flex-col overflow-hidden rounded-xl bg-neutral-800 shadow-xl shadow-neutral-950/30"
     >
       <iframe
         src="https://www.google.com/maps/d/u/0/embed?mid=1HMVXLNL5nIQ7Ovdq4C7feDA5axJA1UY&ehbc=2E312F&noprof=1"
@@ -48,7 +67,7 @@ import Link from "@/components/Link.astro";
         style="border:0"
         loading="lazy"
         allowfullscreen
-        class="absolute bottom-[-14px] left-[-46px] top-[-46px] h-[calc(100%+46px+14px)] w-[calc(100%+46px)] opacity-60"
+        class="absolute top-[-46px] h-[calc(100%+46px+14px)]"
       >
       </iframe>
     </div>

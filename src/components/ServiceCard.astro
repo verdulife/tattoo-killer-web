@@ -1,11 +1,12 @@
 ---
 interface Props {
+  image: string;
   title: string;
   price: string;
   class?: string;
 }
 
-const { title, price } = Astro.props;
+const { image, title, price } = Astro.props;
 ---
 
 <div
@@ -14,6 +15,8 @@ const { title, price } = Astro.props;
     Astro.props.class,
   ]}
 >
+  <img src={image} alt={title} class="w-full rounded-xl shadow-lg aspect-square object-cover" />
+
   <h2 class="mt-8 font-title text-xl font-bold">{title}</h2>
 
   <h3 class="my-4 border-b border-t border-neutral-400 p-4 font-title text-xs">

@@ -9,54 +9,54 @@
   },
   {
     "question": "¿Deja marcas o cicatrices?",
-    "answer": "Un buen tratamiento nunca deja marcas ni cicatrices en la piel las únicas marcas que aparecerán son las hechas a la hora de tatuar si se ha realizado un mal tatuaje."
+    "answer": "No, las unicas marcas que pueden permanecer en la piel son las hechas a la hora de tatuar."
   },
   {
     "question": "¿Cuáles son los factores que intervienen en la eliminación de un tattoo?",
-    "answer": "La eliminación de un tatuaje con láser depende de la calidad de la tinta, su antigüedad, los colores, la zona del cuerpo, la cicatrización, la reacción del cliente al láser y su sistema linfático."
+    "answer": "Los factores principales son la calidad de la tinta, la capa de la piel donde a sido depositada la tinta, la antigüedad del tatuaje, los colores, y más importante el estado de las defensas y sistema linfático del cliente. "
   },
   {
     "question": "¿Se elimina por completo?",
-    "answer": "Sí, la eliminación de un tatuaje es un proceso lento pero efectivo, se puede eliminar un tatuaje por completo sin marcas ni cicatrices en la piel."
+    "answer": "Sí, y aunque es proceso lento, se puede eliminar un tatuaje por completo sin marcas ni cicatrices en la piel."
   },
   {
     "question": "¿Se puede tatuar encima?",
-    "answer": "Sí, una vez curado y perfectamente cicatrizada la piel es posible tatuar encima."
+    "answer": "Sí, una vez curado y perfectamente cicatrizada la piel es posible volver a tatuar encima."
   },
   {
-    "question": "¿Se cae el pelo?",
-    "answer": "No, nuestro tratamiento no daña los folículos capilares. El día de la sesión el técnico laser rasurará la zona a tratar."
+    "question": "¿Se me puede caer el pelo?",
+    "answer": "No, nuestro tratamiento no daña los folículos pilosos. De ser necesario, el día de la sesión el técnico laser rasurará la zona a tratar."
   },
   {
     "question": "¿Cuánto tiempo tiene que pasar entre sesiones?",
-    "answer": "El intervalo entre sesiones debe ser de un mínimo de dos meses aunque en ocasiones puede ser aconsejable distanciarla más."
+    "answer": "El intervalo entre sesiones puede variar entre dos meses y seis meses, dependiendo de la cantidad de sesiones."
   },
   {
     "question": "¿Cómo hay que curarlo?",
-    "answer": "Después de la sesión, es normal sentir escozor e inflamación en la piel, que puede durar de horas a varios días. Lava la zona con jabón neutro y aplica crema balm laser 2 o 3 veces al día durante 10 días. Mantén la zona hidratada, evita el sol, la piscina y el mar durante el primer mes. Si aparecen costras o ampollas, no las toques para evitar marcas."
+    "answer": "Utilizamos unos parches totalmente transparentes, que se aplican despues de cada sesion. Estos parches protejen la zona y favorecen la regeneracion de la piel. Gracias a los parches, no necesitaras hacerte ningun tipo de cura."
   },
   {
-    "question": "El sol y las pieles morenas",
-    "answer": "No se puede realizar una sesión láser en una piel quemada por el sol, es importante no exponer la zona al sol al menos un mes antes de iniciar el tratamiento."
+    "question": "El sol y las pieles bronceadas",
+    "answer": "No se puede realizar una sesión láser en una piel quemada por el sol, es importante no exponer la zona al sol al menos un mes antes de iniciar el tratamiento, ni tampoco un mes despues de la sesión."
   },
   {
     "question": "¿Se puede utilizar crema anestésica?",
-    "answer": "Se puede utilizar pero no es recomendable, es preferible iniciar el tratamiento sin ninguna alteración en la piel, ya que este tipo de cremas puede producir alergias o rojeces en la piel."
+    "answer": "Se puede utilizar pero no es recomendable, ya que en algunos casos puede producir alergias o rojeces en la piel."
   },
   {
-    "question": "¿Cuánto tiempo que pasar desde que me he tatuado para realizar el láser?",
+    "question": "Desde que me he tatuado, ¿cuánto tiempo tiene que pasar para poder usar el láser?",
     "answer": "Mínimo dos meses, pero puede oscilar entre los dos y cuatro meses hasta que la piel esté totalmente regenerada."
   },
   {
     "question": "¿Me puedo bañar en el mar o la piscina después de hacerme el láser?",
-    "answer": "No se recomienda la piscina ni el mar durante los primeros 15 días hasta que la herida esté completamente curada."
+    "answer": "No se recomienda la piscina ni el mar durante los primeros 15-20 días hasta que la herida esté completamente curada."
   },
   {
     "question": "¿Puedo hacerme el láser durante el embarazo o lactancia?",
-    "answer": "No es recomendable realizar una sesión de eliminación de tatuajes durante el embarazo o período de lactancia."
+    "answer": "Durante el embarazo esta completamente prohibido realizar una sesión. No es recomendable realizar una sesión de eliminación de tatuajes durante el período de lactancia."
   },
   {
     "question": "Consejos extra",
-    "answer": "Hidrata la zona con crema 3-4 días antes de la sesión láser. Si es necesario rasurar, se hará en el centro. Después de la sesión, limpia con agua y jabón neutro, seca y aplica crema Balm láser, dejando que cure al aire libre. Bebe un litro extra de agua y toma un diurético natural como cola de caballo durante 30 días. También se recomienda un limpiador de toxinas. Evita el sol durante un mes. Si aparecen ampollas o costras, no las toques; usa crema antibiótica si es necesario y mantén la zona limpia e hidratada."
+    "answer": "Hidrata la zona con crema 3-4 días antes de la sesión láser. Si aparecen ampollas o costras, no las toques, mantén la zona limpia e hidratada. Evita realizar deporte fisico durante la primera semana despues de la sesión."
   }
 ]

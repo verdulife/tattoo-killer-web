@@ -3,6 +3,7 @@ import Logo from "@/assets/Logo.astro";
 import Tooltips from "@/components/Tooltips.astro";
 import HomeMarquee from "@/components/HomeMarquee.astro";
 import Link from "@/components/Link.astro";
+import Info from "@/assets/icons/Info.astro";
 
 const colors = ["text-pink-700", "text-blue-700", "text-yellow-500"];
 const color = colors[Math.floor(Math.random() * colors.length)];
@@ -22,20 +23,25 @@ const color = colors[Math.floor(Math.random() * colors.length)];
       >
     </figure>
 
-    <h1 class="mt-8 font-title text-4xl font-bold md:text-5xl 2xl:text-6xl">
-      Despídete de tus tatuajes con los mejores resultados
+    <h1
+      class="mt-8 text-balance font-title text-4xl font-bold md:text-5xl 2xl:text-6xl"
+    >
+      Eliminación de tatuajes con los mejores resultados
     </h1>
 
     <p class="mt-4 max-w-4xl text-xl text-neutral-600">
-      Ubicados en Barcelona, Gerona, Lérida y Tarragona, en el equipo <strong
-        >TattooKiller</strong
-      >, utilizamos la tecnología más avanzada para garantizar los mejores
-      resultados en el mínimo de sesiones.
+      En TattooKiller, contamos con estudios en Barcelona, Gerona, Lérida y
+      Tarragona, donde ponemos a tu disposición la tecnología más avanzada para
+      garantizar resultados excepcionales en el menor número de sesiones
+      posibles.
     </p>
 
-    <div class="mt-12 flex flex-wrap items-center justify-center">
-      <Link href="#descubre-como"> DESCUBRE COMO </Link>
-      <Link href="#servicios" clean> NUESTROS SERVICIOS </Link>
+    <div class="mt-12 flex flex-wrap items-center justify-center gap-2">
+      <Link href="#servicios">NUESTROS SERVICIOS</Link>
+      <Link href="#descubre-como" clean>
+        <Info />
+        MÁS INFORMACIÓN
+      </Link>
     </div>
 
     <Tooltips />

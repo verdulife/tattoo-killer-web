@@ -5,7 +5,8 @@ const { clean, class: classes, ...props } = Astro.props;
 <a
   class:list={[
     "rounded bg-neutral-800 px-6 pb-3 pt-4 font-title text-xs text-neutral-100 transition-colors hover:bg-neutral-950",
-    clean && "!hover:text-neutral-950 !bg-transparent !text-neutral-800",
+    clean &&
+      "!hover:text-neutral-950 inline-flex items-center gap-2 !bg-transparent !text-neutral-800",
     classes,
   ]}
   {...props}
