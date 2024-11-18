@@ -1,35 +1,25 @@
 ---
-import Logo from "@/assets/Logo.astro";
-import Tooltips from "@/components/Tooltips.astro";
-import HomeMarquee from "@/components/HomeMarquee.astro";
 import Link from "@/components/Link.astro";
 import Info from "@/assets/icons/Info.astro";
-
-const colors = ["text-pink-700", "text-blue-700", "text-yellow-500"];
-const color = colors[Math.floor(Math.random() * colors.length)];
 ---
 
 <section
   id="inicio"
-  class="relative flex min-h-screen flex-col items-center pt-40 lg:pt-44"
+  class="relative flex h-[120dvh] flex-col items-center pt-40 lg:pt-44"
 >
+  <div class="hero-bg absolute inset-0">
+    <div class="absolute inset-0 bg-black/70"></div>
+  </div>
   <article
-    class="relative z-10 flex w-full max-w-4xl flex-col items-center px-8 text-center 2xl:max-w-5xl"
+    class="z-10 flex w-full max-w-4xl flex-col items-center px-8 text-center text-neutral-50 2xl:max-w-5xl"
   >
-    <figure class:list={["flex flex-col items-center gap-2", color]}>
-      <Logo />
-      <span class="flex items-center font-title text-xl font-bold"
-        >TattooKiller<sup class="scale-50">®</sup></span
-      >
-    </figure>
+    <img src="/v-logo.svg" alt="TattooKiller" class="h-32 invert" />
 
-    <h1
-      class="mt-8 text-balance font-title text-4xl font-bold md:text-5xl 2xl:text-6xl"
-    >
-      Eliminación de tatuajes con los mejores resultados
+    <h1 class="mt-8 font-title text-2xl font-bold md:text-5xl">
+      Eliminación laser de tatuajes con los mejores resultados
     </h1>
 
-    <p class="mt-4 max-w-4xl text-xl text-neutral-600">
+    <p class="mt-4 max-w-4xl text-base lg:text-xl text-neutral-100">
       En TattooKiller, contamos con estudios en Barcelona, Gerona, Lérida y
       Tarragona, donde ponemos a tu disposición la tecnología más avanzada para
       garantizar resultados excepcionales en el menor número de sesiones
@@ -38,14 +28,25 @@ const color = colors[Math.floor(Math.random() * colors.length)];
 
     <div class="mt-12 flex flex-wrap items-center justify-center gap-2">
       <Link href="#servicios">NUESTROS SERVICIOS</Link>
-      <Link href="#descubre-como" clean>
-        <Info />
+      <Link href="#descubre-como" class="!text-neutral-100" clean>
+        <Info class="-mt-1" />
         MÁS INFORMACIÓN
       </Link>
     </div>
-
-    <Tooltips />
   </article>
-
-  <HomeMarquee />
 </section>
+
+<style>
+  .hero-bg {
+    background-color: #000;
+    background-image: url("/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 120%;
+    background-blend-mode: luminosity;
+    mask-image: url("/ink.svg");
+    mask-repeat: no-repeat;
+    mask-size: cover;
+    mask-position: center bottom;
+  }
+</style>

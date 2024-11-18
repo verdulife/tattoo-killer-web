@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: 
+
+Sitemap: https://tattoo-killer.netlify.app/sitemap.xml

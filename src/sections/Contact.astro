@@ -7,58 +7,64 @@ import Link from "@/components/Link.astro";
 
 <section
   id="contact"
-  class="mt-32 flex flex-col items-center bg-neutral-800 px-4 pt-10 text-center text-neutral-100 lg:px-10 lg:pt-20"
+  class="relative flex flex-col items-center px-4 text-neutral-100 lg:px-10 lg:pt-72 pb-20"
 >
-  <article class="flex w-full flex-col items-center">
-    <Pretitle class="!text-neutral-400">PIDE TU CITA</Pretitle>
-    <h2 class="mt-10 max-w-xl font-title text-3xl lg:text-5xl">
-      Contacta con nosotros
-    </h2>
+  <div class="footer-bg absolute inset-0 bg-neutral-800"></div>
 
-    <div
-      class="flex w-full max-w-6xl flex-wrap items-center justify-center gap-4 p-6 lg:w-1/2 lg:p-12"
-    >
-      <Link
-        href="https://wa.me/34625275713"
-        target="_blank"
-        rel="external"
-        referrerpolicy="no-referrer"
-        class="!hover:bg-neutral-300 !hover:text-neutral-800 flex min-w-56 items-center justify-center gap-2 !bg-neutral-100 !text-neutral-800"
-      >
-        <Whatsapp />
-        Whatsapp Aitor
-      </Link>
+  <article class="z-10 mt-20 flex w-full max-w-7xl">
+    <div class="flex w-full max-w-6xl flex-col p-6 lg:w-1/2 lg:p-12">
+      <Pretitle class="!text-neutral-400">PIDE TU CITA</Pretitle>
+      <h2 class="mt-10 max-w-xl font-title text-3xl lg:text-5xl">
+        Contacta con nosotros
+      </h2>
 
-      <Link
-        href="tel:0034625275713"
-        class="!hover:bg-neutral-300 !hover:text-neutral-800 flex min-w-56 items-center justify-center gap-2 !bg-neutral-100 !text-neutral-800"
-      >
-        <Phone />
-        625 275 713
-      </Link>
+      <h3 class="font-title mt-10 text-2xl">Aitor</h3>
+      <div class="flex flex-wrap gap-2 mt-2">
+        <Link
+          href="https://wa.me/34625275713"
+          target="_blank"
+          rel="external"
+          referrerpolicy="no-referrer"
+          class="!hover:bg-neutral-300 !hover:text-neutral-800 flex items-center justify-center gap-2 !bg-neutral-100 !text-neutral-800"
+        >
+          <Whatsapp />
+          Whatsapp
+        </Link>
 
-      <Link
-        href="https://wa.me/34662672030"
-        target="_blank"
-        rel="external"
-        referrerpolicy="no-referrer"
-        class="!hover:bg-neutral-300 !hover:text-neutral-800 flex min-w-56 items-center justify-center gap-2 !bg-neutral-100 !text-neutral-800"
-      >
-        <Whatsapp />
-        Whatsapp Isa
-      </Link>
+        <Link
+          href="tel:0034625275713"
+          class="!hover:bg-neutral-300 !hover:text-neutral-800 flex items-center justify-center gap-2 !bg-neutral-100 !text-neutral-800"
+        >
+          <Phone />
+          625 275 713
+        </Link>
+      </div>
 
-      <Link
-        href="tel:0034662672030"
-        class="!hover:bg-neutral-300 !hover:text-neutral-800 flex min-w-56 items-center justify-center gap-2 !bg-neutral-100 !text-neutral-800"
-      >
-        <Phone />
-        662 672 030
-      </Link>
+      <h3 class="font-title text-2xl mt-6">Isa</h3>
+      <div class="flex flex-wrap gap-2 mt-2">
+        <Link
+          href="https://wa.me/34662672030"
+          target="_blank"
+          rel="external"
+          referrerpolicy="no-referrer"
+          class="!hover:bg-neutral-300 !hover:text-neutral-800 flex items-center justify-center gap-2 !bg-neutral-100 !text-neutral-800"
+        >
+          <Whatsapp />
+          Whatsapp Isa
+        </Link>
+
+        <Link
+          href="tel:0034662672030"
+          class="!hover:bg-neutral-300 !hover:text-neutral-800 flex items-center justify-center gap-2 !bg-neutral-100 !text-neutral-800"
+        >
+          <Phone />
+          662 672 030
+        </Link>
+      </div>
     </div>
 
     <div
-      class="max-w-4xl relative mt-10 flex aspect-[3/2] w-full flex-col overflow-hidden rounded-xl bg-neutral-800 shadow-xl shadow-neutral-950/30"
+      class="relative mt-10 flex aspect-[3/2] w-2/3 max-w-4xl flex-col overflow-hidden rounded-xl bg-neutral-800 shadow-xl shadow-neutral-950/30"
     >
       <iframe
         src="https://www.google.com/maps/d/u/0/embed?mid=1HMVXLNL5nIQ7Ovdq4C7feDA5axJA1UY&ehbc=2E312F&noprof=1"
@@ -73,3 +79,12 @@ import Link from "@/components/Link.astro";
     </div>
   </article>
 </section>
+
+<style>
+  .footer-bg {
+    mask-image: url("/ink-footer.svg");
+    mask-repeat: no-repeat;
+    mask-size: cover;
+    mask-position: center top;
+  }
+</style>
