@@ -11,17 +11,23 @@ const { image, title, price } = Astro.props;
 
 <div
   class:list={[
-    "flex flex-col items-center justify-between rounded-xl border-2 border-neutral-200 bg-neutral-50/10 bg-white px-4 py-8 shadow-md backdrop-blur lg:p-12 lg:shadow-xl",
+    "flex flex-col items-center justify-between rounded-xl border-2 border-neutral-200 bg-neutral-50/10 bg-white px-4 py-8 shadow-md lg:p-12 lg:shadow-xl",
     Astro.props.class,
   ]}
 >
-  <img src={image} alt={title} class="w-full rounded-xl shadow-lg aspect-square object-cover" />
+  <img
+    src={image}
+    alt={title}
+    class="aspect-square w-full max-w-xs rounded-xl object-cover shadow-lg"
+  />
 
-  <h2 class="mt-8 font-title text-xl font-bold">{title}</h2>
+  <div class="flex flex-col items-center">
+    <h2 class="mt-8 font-title text-xl font-bold">{title}</h2>
 
-  <h3 class="my-4 border-b border-t border-neutral-400 p-4 font-title text-xs">
-    A PARTIR DE <strong>{price}</strong>
-  </h3>
+    <p class="my-4 border-b border-t border-neutral-400 p-4 font-title text-xs">
+      A PARTIR DE <strong>{price}</strong>
+    </p>
 
-  <slot />
+    <slot />
+  </div>
 </div>

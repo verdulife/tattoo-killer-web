@@ -1,4 +1,5 @@
 import { fontFamily } from "tailwindcss/defaultTheme";
+import containerQueryPlugin from "@tailwindcss/container-queries";
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -10,4 +11,5 @@ export default {
       },
     },
   },
+  plugins: [containerQueryPlugin],
 };

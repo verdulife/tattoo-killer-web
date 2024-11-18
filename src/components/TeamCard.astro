@@ -1,0 +1,33 @@
+---
+interface Props {
+  image: string;
+  title: string;
+  description: string;
+  class?: string;
+}
+
+const { image, title, description } = Astro.props;
+---
+
+<div
+  class:list={["flex flex-col items-center justify-between", Astro.props.class]}
+>
+  <div
+    class="group relative w-full flex aspect-[3/4] flex-col items-start justify-end overflow-hidden rounded-2xl border-2 border-neutral-200 p-6 before:absolute before:inset-0 before:z-10 before:bg-gradient-to-t before:from-black/90 before:to-transparent before:to-60%"
+  >
+    <img
+      src={image}
+      alt={title}
+      class="absolute right-0 top-0 aspect-[3/4] w-full object-cover shadow-lg transition-transform duration-500 group-hover:rotate-3 group-hover:scale-110"
+    />
+    <h2 class="z-10 font-title text-2xl font-bold text-neutral-50">
+      {title}
+    </h2>
+    <p
+      class="z-10 mb-4 text-balance text-left text-lg leading-tight text-neutral-100"
+    >
+      {description}
+    </p>
+    <slot />
+  </div>
+</div>
