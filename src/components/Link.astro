@@ -1,12 +1,10 @@
 ---
-const { clean, class: classes, ...props } = Astro.props;
+const { class: classes, ...props } = Astro.props;
 ---
 
 <a
   class:list={[
-    "rounded bg-neutral-800 px-6 pb-3 pt-4 font-title text-xs text-neutral-100 transition-colors hover:bg-neutral-950 inline-flex items-center align-center",
-    clean &&
-      "!hover:text-neutral-950 gap-2 !bg-transparent !text-neutral-800",
+    "align-center inline-flex items-center text-nowrap rounded bg-neutral-800 px-6 pb-3 pt-4 text-center font-title text-xs text-neutral-100  hover:scale-105 transition-transform",
     classes,
   ]}
   {...props}

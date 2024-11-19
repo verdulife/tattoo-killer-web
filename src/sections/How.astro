@@ -1,4 +1,5 @@
 ---
+import Chat from "@/assets/icons/Chat.astro";
 import Link from "@/components/Link.astro";
 import Pretitle from "@/components/Pretitle.astro";
 ---
@@ -11,21 +12,23 @@ import Pretitle from "@/components/Pretitle.astro";
 
   <article class="mt-10 flex max-w-4xl flex-col gap-8">
     <h2
-      class="erease text-stroke-[0.03rem] text-stroke-neutral-800 font-title text-2xl tracking-tighter lg:text-4xl"
+      class="erease text-stroke-[0.03rem] text-stroke-neutral-800 font-title text-xl tracking-tighter lg:text-4xl"
     >
-      Somos un equipo con mas de 10 años de experiencia especializado en tratamientos laser para la 
-      eliminación de tatuajes, micropigmentación, blanqueamiento y peelings.
+      Somos un equipo con mas de 10 años de experiencia especializado en
+      tratamientos laser para la eliminación de tatuajes, micropigmentación,
+      blanqueamiento y peelings.
 
       <br /><br />
-      
-      Pide tu consulta sin coste ni compromiso, donde te asesoraremos sobre el mejor tratamiento para tu piel.
+
+      Pide tu consulta sin coste ni compromiso, donde te asesoraremos sobre el
+      mejor tratamiento para tu piel.
 
       <br /><br />
       Te daremos información detallada sobre el proceso, la duración de las sesiones
       y un presupuesto personalizado.
     </h2>
 
-    <p class="mt-10 max-w-4xl text-xl text-neutral-600">
+    <p class="mt-10 max-w-4xl text-lg text-neutral-600 lg:text-xl">
       Mientras tanto si te surgen más preguntas sobre nuestros servicios láser,
       no dudes visitar nuestra sección de preguntas frecuentes.
     </p>
@@ -33,6 +36,9 @@ import Pretitle from "@/components/Pretitle.astro";
 
   <div class="mt-6 flex flex-wrap justify-center gap-2">
     <Link href="/preguntas-frequentes">PREGUNTAS FREQUENTES</Link>
-    <Link href="#contacto" clean>CONSULTA GRATUITA</Link>
+    <Link href="#contacto" class="bg-transparent text-neutral-900 gap-2">
+      <Chat class="size-7 -mt-1" />
+      CONSULTA GRATUITA
+    </Link>
   </div>
 </section>
