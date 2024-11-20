@@ -5,9 +5,9 @@ import { reviews } from "@/lib/reviews";
 ---
 
 <section
-  class="mx-auto flex w-full max-w-7xl flex-col gap-12 px-4 lg:flex-row lg:items-center lg:px-0 lg:py-20"
+  class="mx-auto flex w-full max-w-7xl flex-col gap-12 lg:flex-row lg:items-center lg:px-0 lg:py-20"
 >
-  <div class="flex shrink-0 flex-col items-start gap-8">
+  <div class="flex shrink-0 flex-col items-start gap-8 px-4">
     <h2 class="mt-10 max-w-sm font-title text-xl lg:max-w-xl lg:text-6xl">
       Nuestros clientes hablan por nosotros
     </h2>
@@ -22,7 +22,7 @@ import { reviews } from "@/lib/reviews";
 
   <main class="flex w-full">
     <ul
-      class="flex w-full snap-x snap-proximity gap-4 overflow-x-auto py-2 lg:py-12"
+      class="flex w-full snap-x snap-proximity gap-4 px-4 py-2 lg:py-12 [@media(hover:none)]:overflow-x-auto"
     >
       {reviews.map((item) => <ReviewCard {...item} />)}
     </ul>
@@ -30,22 +30,6 @@ import { reviews } from "@/lib/reviews";
 </section>
 
 <style>
-  main {
-    position: relative;
-
-    &:before {
-      content: "";
-      position: absolute;
-      top: 3rem;
-      left: 0;
-      bottom: 3rem;
-      width: 50px;
-      display: flex;
-      background-image: linear-gradient(to right, #f3f4f4, transparent);
-      z-index: 20;
-    }
-  }
-
   ul {
     scrollbar-width: none;
   }
