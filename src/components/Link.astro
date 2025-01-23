@@ -1,11 +1,11 @@
 ---
-const { class: classes, ...props } = Astro.props;
+const { ...props } = Astro.props;
 ---
 
 <a
   class:list={[
-    "align-center inline-flex items-center text-nowrap rounded bg-neutral-800 px-6 pb-3 pt-4 text-center font-title text-xs text-neutral-100  hover:scale-105 transition-transform",
-    classes,
+    "align-center inline-flex items-center text-nowrap rounded bg-neutral-800 px-6 pb-3 pt-4 text-center font-title text-xs text-neutral-100 transition-transform hover:scale-105",
+    Astro.props.class,
   ]}
   {...props}
 >

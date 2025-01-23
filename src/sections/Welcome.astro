@@ -5,15 +5,15 @@ import Info from "@/assets/icons/Info.astro";
 
 <section
   id="inicio"
-  class="relative flex flex-col items-center pt-40 lg:pt-44 pb-72 lg:pb-96"
+  class:list={[
+    "relative flex w-full flex-col items-center bg-[url(/bg.jpg)] bg-cover bg-bottom pb-52 pt-20 lg:pb-80 lg:pt-44",
+    "before:absolute before:inset-0 before:bg-black/80",
+  ]}
 >
-  <div class="hero-bg absolute inset-0">
-    <div class="absolute inset-0 bg-black/70"></div>
-  </div>
   <article
     class="z-10 flex w-full max-w-4xl flex-col items-center px-8 text-center text-neutral-50 2xl:max-w-5xl"
   >
-    <img src="/v-logo.svg" alt="TattooKiller" class="h-32 invert" />
+    <img src="/logo-v-w.svg" alt="TattooKiller" class="h-32 opacity-70" />
 
     <h1 class="mt-8 font-title text-2xl font-bold md:text-5xl">
       Eliminación laser de tatuajes con los mejores resultados
@@ -27,8 +27,10 @@ import Info from "@/assets/icons/Info.astro";
     </p>
 
     <div class="mt-12 flex flex-wrap items-center justify-center gap-2">
-      <Link href="#servicios">NUESTROS SERVICIOS</Link>
-      <Link href="#descubre-como" class="bg-transparent gap-2">
+      <Link href="#servicios" class="!bg-neutral-100 !text-neutral-950">
+        NUESTROS SERVICIOS
+      </Link>
+      <Link href="#descubre-como" class="gap-2 bg-transparent">
         <Info class="-mt-1" />
         MÁS INFORMACIÓN
       </Link>
@@ -37,16 +39,8 @@ import Info from "@/assets/icons/Info.astro";
 </section>
 
 <style>
-  .hero-bg {
-    background-color: #000;
-    background-image: url("/bg.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50% 120%;
-    background-blend-mode: luminosity;
-    mask-image: url("/ink.svg");
-    mask-repeat: no-repeat;
+  section {
+    mask: url("/ink2.svg") no-repeat bottom;
     mask-size: cover;
-    mask-position: center bottom;
   }
 </style>

@@ -1,5 +1,4 @@
 ---
-import Logo from "@/assets/Logo.astro";
 import Instagram from "@/assets/icons/Instagram.astro";
 import Tiktok from "@/assets/icons/Tiktok.astro";
 
@@ -10,13 +9,7 @@ const year = new Date().getFullYear();
   <div class="w-full max-w-7xl flex flex-col gap-2 p-8">
     <div class="flex flex-wrap justify-between gap-12 w-full">
       <a href="/">
-        <figure class="flex items-center gap-2">
-          <Logo width={40} />
-
-          <figcaption class="font-title self-center text-xl whitespace-nowrap">
-            TattooKiller
-          </figcaption>
-        </figure>
+        <img src="/logo-h-w.svg" alt="TattooKiller" class="h-12" />
       </a>
     </div>
 

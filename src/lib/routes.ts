@@ -4,8 +4,12 @@ export const routes = [
     title: "Inicio",
   },
   {
-    slug: "/servicios",
-    title: "Servicios",
+    slug: "/servicios-laser",
+    title: "Láser",
+  },
+  {
+    slug: "/servicios-estetica",
+    title: "Estética",
   },
   {
     slug: "/equipo",
@@ -15,8 +19,4 @@ export const routes = [
     slug: "/preguntas-frequentes",
     title: "FAQ",
   },
-  {
-    slug: "#contacto",
-    title: "Contacto",
-  }
 ];

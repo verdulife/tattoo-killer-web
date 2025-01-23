@@ -6,10 +6,12 @@ import Link from "@/components/Link.astro";
 
 <section
   id="servicios"
-  class="flex flex-col items-center justify-center px-8 text-center pt-40 -mt-64"
+  class="flex flex-col items-center justify-center px-8 pt-20 text-center"
 >
   <Pretitle>NUESTROS SERIVICIOS</Pretitle>
-  <h2 class="mt-8 font-title text-2xl lg:text-4xl max-w-2xl font-bold">Los mejores tratamientos laser en Cataluña</h2>
+  <h2 class="mt-8 max-w-2xl font-title text-2xl font-bold lg:text-4xl">
+    Los mejores tratamientos laser en Cataluña
+  </h2>
 
   <article class="mt-10 grid max-w-7xl grid-cols-6 gap-4 text-center">
     <ServiceCard
@@ -18,7 +20,7 @@ import Link from "@/components/Link.astro";
       price="50€"
       class="col-span-6 lg:col-span-3"
     >
-      <p class="mb-4 text-base lg:text-lg text-neutral-600">
+      <p class="mb-4 text-base text-neutral-600 lg:text-lg">
         En <strong>TattooKiller</strong> ofrecemos un servicio de eliminación de
         tatuajes seguro y respetuoso con la salud de tu piel, respaldado por tecnología
         más avanzada.
@@ -33,43 +35,10 @@ import Link from "@/components/Link.astro";
       price="60€"
       class="col-span-6 lg:col-span-3"
     >
-      <p class="mb-4 text-base lg:text-lg text-neutral-600">
+      <p class="mb-4 text-base text-neutral-600 lg:text-lg">
         La micropigmentación se encuentra en áreas especialmente delicadas del
         rostro, razón por la cual este tratamiento de eliminación se distingue
         por su enfoque suave y poco invasivo.
-      </p>
-
-      <Link href="/servicios/eliminacion-micropigmentacion">
-        MAS INFORMACIÓN
-      </Link>
-    </ServiceCard>
-
-    <ServiceCard
-      image="./images/blanqueamiento-corporal.jpg"
-      title="Blanqueamiento corporal, anal y perianal" 
-      price="60€"
-      class="col-span-6 lg:col-span-2"
-    >
-      <p class="mb-4 text-base lg:text-lg text-neutral-600">
-        Este tratamiento laser es la mejor opcion para llevar a cabo el blanqueo
-        corporal, anal y perianal de una forma eficaz y segura.
-      </p>
-
-      <Link href="/servicios/eliminacion-micropigmentacion">
-        MAS INFORMACIÓN
-      </Link>
-    </ServiceCard>
-
-    <ServiceCard
-    image="./images/eliminacion-hongos-unas.jpg"
-      title="Eliminacion de hongos en uñas"
-      price="35€"
-      class="col-span-6 lg:col-span-2"
-    >
-      <p class="mb-4 text-base lg:text-lg text-neutral-600">
-        Despidete de los hongos en las uñas con nuestro servicio laser. Este
-        tratamiento acaba con los hongos desde la raiz de una forma segura y
-        efectiva.
       </p>
 
       <Link href="/servicios/eliminacion-micropigmentacion">
@@ -83,9 +52,42 @@ import Link from "@/components/Link.astro";
       price="50€"
       class="col-span-6 lg:col-span-2"
     >
-      <p class="mb-4 text-base lg:text-lg text-neutral-600">
+      <p class="mb-4 text-base text-neutral-600 lg:text-lg">
         El carbon activo junto con nuestro tratamiento laser, hacen una
         exfoliacion profunda y activan la elastina y el colageno de la piel.
+      </p>
+
+      <Link href="/servicios/eliminacion-micropigmentacion">
+        MAS INFORMACIÓN
+      </Link>
+    </ServiceCard>
+
+    <ServiceCard
+      image="./images/eliminacion-hongos-unas.jpg"
+      title="Eliminacion de hongos en uñas"
+      price="35€"
+      class="col-span-6 lg:col-span-2"
+    >
+      <p class="mb-4 text-base text-neutral-600 lg:text-lg">
+        Despidete de los hongos en las uñas con nuestro servicio laser. Este
+        tratamiento acaba con los hongos desde la raiz de una forma segura y
+        efectiva.
+      </p>
+
+      <Link href="/servicios/eliminacion-micropigmentacion">
+        MAS INFORMACIÓN
+      </Link>
+    </ServiceCard>
+
+    <ServiceCard
+      image="./images/blanqueamiento-corporal.jpg"
+      title="Blanqueamiento corporal, anal y perianal"
+      price="60€"
+      class="col-span-6 lg:col-span-2"
+    >
+      <p class="mb-4 text-base text-neutral-600 lg:text-lg">
+        Este tratamiento laser es la mejor opcion para llevar a cabo el blanqueo
+        corporal, anal y perianal de una forma eficaz y segura.
       </p>
 
       <Link href="/servicios/eliminacion-micropigmentacion">
