@@ -1,93 +1,146 @@
 ---
 import { routes } from "@/lib/routes";
+import Close from "@/assets/icons/Close.astro";
+import Menu from "@/assets/icons/Menu.astro";
+
+const links = [...routes, { slug: "#contact", title: "Contacto" }];
 ---
 
-<header class="fixed left-0 top-0 z-50 w-full justify-center p-4 hidden md:flex">
+<header
+  id="siteHeader"
+  class="fixed inset-x-0 top-0 z-50 flex justify-center p-3 md:p-4"
+>
   <nav
-    class="flex w-full max-w-6xl flex-col items-center justify-between rounded-xl border border-neutral-200 bg-neutral-50/70 p-3 backdrop-blur lg:flex-row lg:px-8"
+    class="flex w-full max-w-6xl items-center justify-between rounded-xl border border-neutral-200 bg-neutral-50/70 p-2 backdrop-blur md:p-3 lg:px-8"
   >
-    <div class="flex w-full items-center justify-between lg:w-auto">
-      <a href="/">
-        <span class="flex items-center gap-2 font-title text-xl font-bold">
-          <img src="/logo-h-b.svg" alt="TattooKiller" class="h-12" />
-        </span>
-      </a>
+    <a href="/" aria-label="TattooKiller — ir al inicio">
+      <img src="/logo-h-b.svg" alt="TattooKiller" class="h-9 md:h-12" />
+    </a>
 
-      <button
-        id="menuBtn"
-        class="flex h-9 w-10 flex-col items-end justify-between p-2 lg:hidden"
-      >
-        <span class="h-[3px] w-full rounded-full bg-neutral-800 transition-all"
-        ></span>
-        <span class="h-[3px] w-1/2 rounded-full bg-neutral-800 transition-all"
-        ></span>
-        <span class="h-[3px] w-3/4 rounded-full bg-neutral-800 transition-all"
-        ></span>
-        <span class="sr-only">Botón menú</span>
-      </button>
-    </div>
-
-    <ul
-      id="menu"
-      class="hidden w-full flex-col items-center overflow-hidden p-8 lg:flex lg:w-auto lg:flex-row lg:p-0"
-    >
+    <ul class="hidden items-center lg:flex">
       {
-        routes.map(({ slug, title }) => (
-          <li class="flex w-full lg:w-auto">
+        links.map(({ slug, title }) => (
+          <li class="flex">
             <a
               href={slug}
-              class="mt-3 w-full rounded-lg border border-neutral-200 bg-neutral-50 p-6 font-title text-2xl shadow-lg transition-all lg:mt-0 lg:w-auto lg:border-2 lg:border-transparent lg:bg-transparent lg:px-6 lg:pb-2 lg:pt-3 lg:text-base lg:shadow-none lg:hover:bg-neutral-800 lg:hover:text-neutral-100"
+              class="rounded-lg border-2 border-transparent px-6 pb-2 pt-3 font-title text-base transition-all hover:bg-neutral-800 hover:text-neutral-100"
             >
               {title}
             </a>
           </li>
         ))
       }
-      <li class="flex w-full lg:w-auto">
-        <a
-          id="menuContact"
-          href="#contact"
-          class="mt-3 w-full rounded-lg border border-neutral-200 bg-neutral-50 p-6 font-title text-2xl shadow-lg transition-all lg:mt-0 lg:w-auto lg:border-2 lg:border-transparent lg:bg-transparent lg:px-6 lg:pb-2 lg:pt-3 lg:text-base lg:shadow-none lg:hover:bg-neutral-800 lg:hover:text-neutral-100"
-        >
-          Contacto
-        </a>
-      </li>
     </ul>
+
+    <button
+      id="menuBtn"
+      type="button"
+      class="flex size-11 items-center justify-center rounded-lg text-neutral-800 transition-colors active:bg-neutral-200 lg:hidden"
+      aria-controls="mobileMenu"
+      aria-expanded="false"
+      aria-label="Abrir menú"
+    >
+      <Menu class="size-7" />
+    </button>
   </nav>
 </header>
 
+<div
+  id="mobileMenu"
+  class="fixed inset-0 z-[60] flex hidden flex-col overflow-y-auto bg-neutral-800 lg:hidden"
+>
+  <div class="flex items-center justify-between p-5">
+    <a href="/" aria-label="TattooKiller — ir al inicio">
+      <img src="/logo-h-w.svg" alt="TattooKiller" class="h-9" />
+    </a>
+
+    <button
+      id="menuClose"
+      type="button"
+      class="flex size-11 items-center justify-center rounded-lg text-neutral-100 transition-colors hover:bg-neutral-700"
+      aria-label="Cerrar menú"
+    >
+      <Close class="size-7" />
+    </button>
+  </div>
+
+  <nav class="flex flex-1 items-center justify-center px-6">
+    <ul class="mt-16 flex flex-col items-center gap-3 md:gap-5">
+      {
+        links.map(({ slug, title }) => (
+          <li>
+            <a
+              href={slug}
+              class="block px-6 py-2 font-title text-3xl text-neutral-100 transition-colors hover:text-neutral-400 md:text-4xl"
+            >
+              {title}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</div>
+
 <script>
-  const menuBtn = document.querySelector("#menuBtn");
-  const menu = document.querySelector("#menu");
+  const header = document.querySelector<HTMLElement>("#siteHeader");
+  const menuBtn = document.querySelector<HTMLButtonElement>("#menuBtn");
+  const menu = document.querySelector<HTMLElement>("#mobileMenu");
+  const menuClose = document.querySelector<HTMLButtonElement>("#menuClose");
 
-  menuBtn?.addEventListener("click", () => {
-    menu?.classList.toggle("hidden");
-    menuBtn?.classList.toggle("open");
+  const openMenu = () => {
+    menu?.classList.remove("hidden");
+    menu?.classList.add("is-open");
+    menuBtn?.setAttribute("aria-expanded", "true");
+    document.body.classList.add("overflow-hidden");
+    header?.setAttribute("inert", "");
+    menuClose?.focus();
+  };
+
+  const closeMenu = ({ restoreFocus = false } = {}) => {
+    if (!menu || menu.classList.contains("hidden")) return;
+    menu.classList.add("hidden");
+    menu.classList.remove("is-open");
+    menuBtn?.setAttribute("aria-expanded", "false");
+    document.body.classList.remove("overflow-hidden");
+    header?.removeAttribute("inert");
+    if (restoreFocus) menuBtn?.focus();
+  };
+
+  menuBtn?.addEventListener("click", openMenu);
+  menuClose?.addEventListener("click", () => closeMenu({ restoreFocus: true }));
+
+  // Choosing any link closes the overlay. In-page anchors (#contact) do not
+  // reload the page, so they would otherwise leave the overlay open.
+  menu?.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => closeMenu());
   });
 
-  // An in-page anchor does not reload the page, so the mobile menu must be
-  // closed explicitly after the contact link is used.
-  document.querySelectorAll('#menu a[href^="#"]').forEach((link) => {
-    link.addEventListener("click", () => {
-      menu?.classList.add("hidden");
-      menuBtn?.classList.remove("open");
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeMenu({ restoreFocus: true });
+  });
+
+  // The overlay only exists below the lg breakpoint.
+  window
+    .matchMedia("(min-width: 1024px)")
+    .addEventListener("change", (event) => {
+      if (event.matches) closeMenu();
     });
-  });
 </script>
 
 <style>
-  .open {
-    justify-content: center;
-    align-items: center;
+  #mobileMenu.is-open {
+    animation: menu-fade 200ms ease-out;
   }
-  .open > span:nth-of-type(1) {
-    transform: rotate(-45deg);
-  }
-  .open > span:nth-of-type(2) {
-    display: none;
-  }
-  .open > span:nth-of-type(3) {
-    width: 100%;
-    transform: rotate(45deg);
+
+  @keyframes menu-fade {
+    from {
+      opacity: 0;
+      transform: translateY(-8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 </style>
