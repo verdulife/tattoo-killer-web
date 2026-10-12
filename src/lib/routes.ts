@@ -12,10 +12,6 @@ export const routes = [
     title: "Estética",
   },
   {
-    slug: "/equipo",
-    title: "Equipo",
-  },
-  {
     slug: "/preguntas-frequentes",
     title: "FAQ",
   },
