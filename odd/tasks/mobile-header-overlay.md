@@ -37,6 +37,10 @@ con el icono X y también al elegir cualquier enlace.
       en lugar del antiguo desplegable.
 - [x] T5. Verificación funcional con navegador real (Puppeteer) en 390 / 768 / 900 / 1440 px sobre
       las 4 páginas, más `astro check` y `astro build`.
+- [ ] T6. Añadir aire sobre el primer enlace del overlay hasta ~100px (el primer intento usó un
+      sesgo de centrado y quedó en 226px).
+- [ ] T7. Añadir padding superior solo en móvil dentro de la primera sección de las páginas de
+      inicio, láser y estética (no en FAQ) para que el header no quede tan cerca.
 
 ## Superficies de edición (real)
 
@@ -62,9 +66,9 @@ Commit de la implementación: `b583e89`.
 - Puppeteer, 40 comprobaciones, todas en PASS:
   - móvil 390 y 430: header visible con logo + hamburguesa y sin enlaces; overlay ocupa viewport
     completo (`1024×768`/`fixed`), fondo `rgb(38, 38, 38)`; 5 enlaces en orden
-    (Inicio, Láser, Estética, FAQ, Contacto), centrados, 30px, con `gapAbove > gapBelow`
-    (226px vs 162px, el aire extra arriba pedido); foco pasa a la X; `aria-expanded=true`,
-    scroll del body bloqueado, header `inert`.
+    (Inicio, Láser, Estética, FAQ, Contacto), centrados, 30px; aire sobre el primer enlace de 96px
+    (`pt-24` con la lista alineada arriba, tras el ajuste de T6); foco pasa a la X;
+    `aria-expanded=true`, scroll del body bloqueado, header `inert`.
   - cierre verificado por los tres caminos: X (recupera foco en la hamburguesa y desbloquea),
     Escape, y clic en enlace (`#contact` cierra y hace scroll; ruta cierra y navega).
   - tablet 768 / 900 / 1023: header con hamburguesa, sin desplegable embebido, overlay a 36px.
